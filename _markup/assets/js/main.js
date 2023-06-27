@@ -101,6 +101,35 @@ class About{
   	}
 }
 
+class VisiableTracker{
+	constructor(){
+		this.trackElement = "section";
+		this.addRemoveClass = "g-visible";
+	}
+
+	track(){
+		const elements = document.querySelectorAll(this.trackElement);
+
+		const observer = new IntersectionObserver(entries => {
+		  entries.forEach(entry => {
+		    if (entry.isIntersecting) {
+		      entry.target.classList.add(this.addRemoveClass);
+		    } else {
+		      entry.target.classList.remove(this.addRemoveClass);
+		    }
+		  });
+		});
+
+		elements.forEach(element => {
+		  observer.observe(element);
+		});
+	}
+
+	run(){
+		this.track();
+	}
+}
+
 /* Header */
 var loader = new Loader;
 loader.run();
@@ -111,3 +140,8 @@ header.run();
 /*About*/
 var about = new About;
 about.run();
+
+/* VisiableTracker */
+var visiableTracker = new VisiableTracker;
+visiableTracker.run();
+

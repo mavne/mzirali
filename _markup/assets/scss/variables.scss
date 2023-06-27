@@ -4,6 +4,12 @@
   transition-timing-function: ease-in-out;
 }
 
+@mixin transCubic($property, $duration) {
+  transition-property: #{$property};
+	transition-duration: #{$duration};
+	transition-timing-function: cubic-bezier(0.01, 0.02, 0.14, 1);
+}
+
 @mixin scroll($width, $track, $thumb, $thumbHover) {
   /* width */
 	::-webkit-scrollbar {
@@ -64,6 +70,14 @@
 		-webkit-mask-position: #{$position};
 		mask-position: #{$position};
 	}
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-20px); }
+  50% { transform: translateX(20px); }
+  75% { transform: translateX(-20px); }
+  100% { transform: translateX(0); }
 }
 
 $center: 1640px;

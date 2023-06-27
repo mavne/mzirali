@@ -1105,6 +1105,12 @@ main .about .center_small .content .outside-left{
 	top: 0;
 	overflow: hidden;
 	z-index: 2;
+	transform: translateX(-200px);
+	@include transCubic('transform', '1200ms');
+}
+
+main .about.g-visible .center_small .content .outside-left{
+	transform: translateX(0);
 }
 
 main .about .center_small .content .outside-left .image{
@@ -1131,6 +1137,12 @@ main .about .center_small .content .outside-right{
 	top: 0;
 	overflow: hidden;
 	z-index: 2;
+	transform: translateX(200px);
+	@include transCubic('transform', '1200ms');
+}
+
+main .about.g-visible .center_small .content .outside-right{
+	transform: translateX(0px);
 }
 
 main .about .center_small .content .outside-right .image{
@@ -1192,6 +1204,10 @@ main .about .center_small .content .text .data-list li{
 	margin-bottom: 12px;
 	background-color: $color1;
 	@include trans('background-color', '600ms');
+}
+
+main .about.g-visible .center_small .content .text .data-list li{
+	animation: shake 1s;
 }
 
 main .about .center_small .content .text .data-list li:hover{
@@ -1267,6 +1283,12 @@ main .about .center_small .content .inside-image{
 	position: relative;
 	float: left;
 	z-index: 2;
+	transform: translateX(200px);
+	@include transCubic('transform', '1200ms');
+}
+
+main .about.g-visible .center_small .content .inside-image{
+	transform: translateX(0);
 }
 
 main .about .center_small .content .inside-image .image{
@@ -1283,4 +1305,55 @@ main .about .center_small .content .inside-image .image{
 
 main .about .center_small .content .inside-image:hover .image{
 	transform: scale(1.2);
+}
+
+main .call-request{
+	@include makeNull;
+	width: 100%;
+	padding: 85px 0;
+	background-color: $color3;
+}
+
+main .call-request{
+	@include makeNull;
+	width: 100%;
+	padding: 85px 0;
+	background-color: $color3;
+}
+
+main .call-request .ask-call{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	height: 81px;
+	background-color: $white;
+	border-radius: 47px;
+	padding: 0 90px;
+	color: $color1;
+	float: left;
+	transform: translateY(-100px);
+	@include transCubic('background-color, color, transform', '1200ms');
+}
+
+main .call-request.g-visible .ask-call{
+	transform: translateY(0);
+}
+
+main .call-request .ask-call:hover{
+	background-color: $color1;
+	color: $white;
+}
+
+main .call-request p{
+	@include makeNull;
+	max-width: 536px;
+	padding-right: 90px;
+	float: right;
+	color: $white;
+	transform: translateY(-100px);
+	@include transCubic('transform', '1200ms');
+}
+
+main .call-request.g-visible p{
+	transform: translateY(0px);
 }

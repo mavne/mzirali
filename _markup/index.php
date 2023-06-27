@@ -12,7 +12,6 @@ $version = "1.0.4";
 	<link rel="stylesheet" type="text/css" href="/_markup/assets/owl/owl.carousel.min.css" />
 	<link rel="stylesheet" href="/_markup/assets/lightbox/jquery.lightbox.css" />
 	<link rel="stylesheet" type="text/css" href="/_markup/assets/css/main.css?v=<?=$version?>" />
-	<link rel="stylesheet" type="text/css" href="/_markup/assets/aos/aos.css" />
 	<link rel="stylesheet" type="text/css" href="/_markup/assets/css/ge.css?v=<?=$version?>" />
 	<link rel="stylesheet" type="text/css" href="/_markup/assets/css/responsive_ge.css?v=<?=$version?>" />
 </head>
@@ -161,19 +160,19 @@ $version = "1.0.4";
 					<p>"მზირალი“ საცხოვრებელი და საინვესტიციო კომპლექსი შავი ზღვის სანაპიროზე, სადაც ყველა პირობაა შექმნილი მშვიდი, ხარისხიანი და კომფორტული ცხოვრებისთვის და დასვენებისთვის. აქაური გარემო ეკოლოგიურად სუფთა და ჯანსაღია, რასაც ზღვისა და მთის უნიკალური მიკროკლიმატი და უსუფთავესი ზღვის წყალი განაპირობებს. კომპლექსი ორი, 9 და 11 სართულიანი ბლოკისგან შედგება. თითოეულ სართულზე   მაქსიმუმ 5 ბინა განლაგდება. ყველა ბინა მზიანი და ნათელია. ბინებიდან იშლება ზღვისა და მთის ულამაზესი პანორამული ხედები, რაც აქ დასვენებას თუ ცხოვრებას ერთნაირად სასიამოვნოს ხდის. მშენებლობის პროცესში გამოყენებულია მხოლოდ ხარისხიანი სამშენებლო მასალები</p>
 
 					<ul class="data-list">
-						<li data-aos="fade-down">
+						<li>
 							<div class="before"></div>
 							<em class="flat"></em>
 							<p>ბინების ჯამური რაოდენობა: 80</p>
 						</li>
 
-						<li data-aos="fade-down">
+						<li>
 							<div class="before"></div>
 							<em class="calendar"></em>
 							<p>მშენებლობის დასრულება: 2024 წლის ბოლო </p>
 						</li>
 
-						<li data-aos="fade-down">
+						<li>
 							<div class="before"></div>
 							<em class="guarantee"></em>
 							<p>3 წლიანი გარანტია რემონტზე და კარ-ფანჯრებზე </p>
@@ -192,6 +191,15 @@ $version = "1.0.4";
 			</div>
 		</div>
 	</section>
+
+	<section class="call-request">
+		<div class="center_small">
+			<a href="" class="ask-call">შეუკვეთე ზარი</a>
+			<p>კომფორტული საცხოვრებელი სივრცე, შესანიშნავი  ლოკაცია, მომგებიანი ინვესტიცია!</p>
+
+			<div class="clearer"></div>
+		</div>
+	</section>
 </main>
 
 <footer>
@@ -205,10 +213,6 @@ $version = "1.0.4";
 <script type="text/javascript" src="/_markup/assets/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/_markup/assets/js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="/_markup/assets/js/main.js?v=<?=$version?>"></script>
-<script type="text/javascript" src="/_markup/assets/aos/aos.js"></script>
-<script>
-  AOS.init();
-</script>
 </body>
 
 </html>
