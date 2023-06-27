@@ -1357,3 +1357,69 @@ main .call-request h2{
 main .call-request.g-visible h2{
 	transform: translateY(0px);
 }
+
+main .main-advantages{
+	@include makeNull;
+}
+
+main .main-advantages .center_small h2{
+	@include makeNull;
+	text-align: center;
+	color: $color5;
+	padding: 85px 0;
+} 
+
+main .main-advantages .center_small .list-box{
+	@include makeNull;
+} 
+
+main .main-advantages .center_small .list-box ul{
+	@include makeNull;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+} 
+
+main .main-advantages .center_small .list-box ul li{
+	@include makeNull;
+	flex-basis: 33.33%;
+	padding: 60px 40px 90px 40px;
+	border-bottom: solid 1px $color5;
+	position: relative;
+} 
+
+main .main-advantages .center_small .list-box ul li::after{
+	content: "";
+	width: 1px;
+	height: 145px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background-color: $color5;
+}
+
+main .main-advantages .center_small .list-box ul li.third::after{
+	content: none;
+}
+
+main .main-advantages .center_small .list-box ul li.last::after{
+	content: none;
+}
+
+main .main-advantages .center_small .list-box ul li.last{
+	border-bottom: none;
+}
+
+main .main-advantages .center_small .list-box ul li.last::before{
+	content: "";
+	width: 1px;
+	height: 114px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: $color5;
+}
+
+main .main-advantages .center_small .list-box ul li.third::before{
+	content: none;
+}

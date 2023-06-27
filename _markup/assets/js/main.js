@@ -130,6 +130,28 @@ class VisiableTracker{
 	}
 }
 
+class Advantages{
+	addLast3LiClass(){
+		var ulElement = document.querySelector("main .main-advantages .center_small .list-box ul");
+		
+	  	var liElements = ulElement.querySelectorAll("li:nth-last-child(-n+3)");
+	  	liElements.forEach(function(liElement) {
+	    	liElement.classList.add("last");
+	  	});
+
+	  	var liElements2 = ulElement.querySelectorAll("li");
+		liElements2.forEach(function(liElement, index) {
+			if((index + 1) % 3 === 0) {
+				liElement.classList.add("third");
+			}
+		});
+	}
+
+	run(){
+		this.addLast3LiClass();
+	}
+}
+
 /* Header */
 var loader = new Loader;
 loader.run();
@@ -144,4 +166,8 @@ about.run();
 /* VisiableTracker */
 var visiableTracker = new VisiableTracker;
 visiableTracker.run();
+
+/* Advantages */
+var advantages = new Advantages;
+advantages.run();
 
