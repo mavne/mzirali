@@ -1,0 +1,16 @@
+1120
+
+
+lines: z-index: 8
+
+
+menu: z-index: 9
+menu opend: z-index: 10
+
+fixed top menu: z-index: 100
+
+logo: z-index: 11
+live video: z-index: 11
+social networks: z-index: 11
+
+main image: z-index: 7

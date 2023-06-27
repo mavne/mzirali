@@ -1,0 +1,1251 @@
+@import 'variables';
+
+/* Set the width and height of the scrollbar */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+/* Add background color to the scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: $color2;
+}
+
+/* Add hover effect to the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: $color2;
+}
+
+/* Add color to the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: $color1;
+}
+
+::selection{
+	background:$color1;
+	color:white;
+}
+
+::-moz-selection{
+	background:$color1;
+	color:white;
+}
+
+.clearer{
+	clear: both;
+}
+
+body{
+	@include makeNull;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.lines{
+	@include makeNull;
+	width: 100%;
+	height: 1500px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8;
+	pointer-events: none;
+}
+
+.lines .vertical{
+	@include makeNull;
+	width: $center_small;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: calc(50% - #{$center_small / 2});
+	z-index: 1;
+}
+
+.lines .vertical .left{
+	@include makeNull;
+	width: 1px;
+	height: 0;
+	background-color: $rgba1;
+	position: absolute;
+	left: 0;
+	top: 0;
+	@include trans('height', '1200ms');
+}
+
+.lines .vertical .middle{
+	@include makeNull;
+	width: 1px;
+	height: 0;
+	background-color: $rgba1;
+	position: absolute;
+	right: 277px;
+	top: 0;
+	@include trans('height', '1200ms');
+}
+
+.lines .vertical .right{
+	@include makeNull;
+	width: 1px;
+	height: 0;
+	background-color: $rgba1;
+	position: absolute;
+	right: 0;
+	top: 0;
+	@include trans('height', '1200ms');
+}
+
+.loaded .lines .vertical .left,
+.loaded .lines .vertical .middle,
+.loaded .lines .vertical .right{
+	height: 100%;
+}
+
+.lines .horizontal{
+	@include makeNull;
+	width: 0;
+	height: 1px;
+	background-color: $rgba1;
+	position: absolute;
+	left: 0;
+	top: 688px;
+	@include trans('width', '1200ms');
+}
+
+.loaded .horizontal{
+	width: 100%;
+}
+
+.center{
+	margin: 0 auto;
+	width: $center;
+}
+
+.center_small{
+	margin: 0 auto;
+	width: $center_small;
+}
+
+.logo-live-social{
+	@include makeNull;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 11;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	display: none;
+}
+
+.logo-live-social .center{
+	position: relative;
+	height: 339px;
+}
+
+.logo-live-social .center .logo{
+	@include makeNull;
+	width: 235px;
+	height: 72px;
+	display: block;
+	text-decoration: none;
+	text-indent: -9999px;
+	position: absolute;
+	top: calc(50% - 36px);
+	left: 0;
+	pointer-events: all;
+}
+
+.logo-live-social .center .logo::before{
+	@include makeNull;
+	content: "";
+	width: 45px;
+	height: 100%;
+	background-color: $color1;
+	@include sprite('0px 0px');
+	position: absolute;
+	left: 0;
+	top: 0;
+	mix-blend-mode: normal;
+}
+
+.logo-live-social .center .logo::after{
+	@include makeNull;
+	content: "";
+	width: 178px;
+	height: 100%;
+	background-color: $color2;
+	@include sprite('-63px 0px');
+	@include trans('background-color', '600ms');
+	position: absolute;
+	left: 63px;
+	top: 0;
+	mix-blend-mode: normal;
+}
+
+.navOpened .logo-live-social .center .logo::after{
+	background-color: $white;
+}
+
+.logo-live-social .center .right{
+	@include makeNull;
+	position: relative;
+}
+
+.logo-live-social .center .right .center_small{
+	position: relative;
+}
+
+.logo-live-social .center .right .center_small .live-video{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	color: $white;
+	float: right;
+	height: 44px;
+	border-radius: 22px;
+	background-color: $color3;
+	margin-top: 58px;
+	margin-right: 12px;
+	padding: 0 30px 0 75px;
+	position: relative;
+	@include trans('background-color, color', '600ms');
+	pointer-events: all;
+}
+
+.logo-live-social .center .right .center_small .live-video::before{
+	@include makeNull;
+	content: "";
+	width: 32px;
+	height: 20px;
+	position: absolute;
+	top: calc(50% - 10px);
+	left: 24px;
+	@include sprite('-3px -89px');
+	background-color: $white;
+}
+
+.logo-live-social .center .right .center_small .live-video:hover{
+	background-color: $color1;
+}
+
+.navOpened .logo-live-social .center .right .center_small .live-video{
+	background-color: $white;
+	color: $color3;
+}
+
+.navOpened .logo-live-social .center .right .center_small .live-video::before{
+	background-color: $color3;
+}
+
+.navOpened .logo-live-social .center .right .center_small .live-video:hover{
+	background-color: $color1;
+}
+
+.logo-live-social .center .right .social{
+	@include makeNull;
+	list-style-type: none;
+	position: absolute;
+	top: 68px;
+	right: 0;
+}
+
+.logo-live-social .center .right .social li{
+	@include makeNull;
+	float: left;
+	margin: 0 0 0 20px;
+}
+
+.logo-live-social .center .right .social li:first-child{
+	margin-left: 0;
+}
+
+.logo-live-social .center .right .social li a{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	width: 22px;
+	height: 22px;
+	text-indent: -9999px;
+	position: relative;
+	filter: grayscale(100%);
+	@include trans('filter', '600ms');
+	pointer-events: all;
+}
+
+.navOpened .logo-live-social .center .right .social li a{
+	filter: none;
+}
+
+.logo-live-social .center .right .social li a:hover{
+	filter:none;
+}
+
+.navOpened .logo-live-social .center .right .social li a:hover{
+	filter: grayscale(100%);
+}
+
+.logo-live-social .center .right .social li a::before{
+	@include makeNull;
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.logo-live-social .center .right .social li a.facebook::before{
+	@include sprite('-43px -89px', 'true');
+}
+
+.logo-live-social .center .right .social li a.instagram::before{
+	@include sprite('-70px -89px', 'true');
+}
+
+.logo-live-social .center .right .social li a.telegram::before{
+	@include sprite('-96px -89px', 'true');
+}
+
+.logo-live-social .center .right .social li a.whatsapp::before{
+	@include sprite('-151px -89px', 'true');
+}
+
+.logo-live-social .center .right .social li a.viber::before{
+	@include sprite('-124px -89px', 'true');
+}
+
+header{
+	@include makeNull;
+	width: 100%;
+	height: 339px;
+	position: relative;
+	background-color: $white;
+	z-index: 9;
+	border-bottom: solid 1px $color3;
+	display: none;
+}
+
+header .center{
+	position: relative;
+}
+
+header .center .center_small .burger-language-data{
+	@include makeNull;
+	width: 273px;
+	height: 688px;
+	position: relative;
+	margin-right: 279px;
+	float: right;
+}
+
+header .center .center_small .burger-language-data::before{
+	@include makeNull;
+	content: "";
+	width: 100%;
+	height: 339px;
+	background-color: $color1;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	mix-blend-mode: multiply;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+header .center .center_small .burger-language-data .burger{
+	@include makeNull;
+	width: 40px;
+	height: 40px;
+	margin: 60px auto 0 auto;
+	display: block;
+	text-decoration: none;
+	text-indent: -9999px;
+	position: relative;
+	z-index: 2;
+}
+
+header .center .center_small .burger-language-data .burger::before{
+	@include makeNull;
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include sprite('-3px -123px');
+	background-color: $color4;
+}
+
+header .center .center_small .burger-language-data .line{
+	@include makeNull;
+	width: 2000px;
+	height: 1px;
+	background-color: $color5;
+	position: absolute;
+	left: 0;
+	top: 155px;
+}
+
+header .center .center_small .burger-language-data .languages{
+	@include makeNull;
+	width: 100%;
+	list-style-type: none;
+	float: left;
+	margin-top: 55px;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
+header .center .center_small .burger-language-data .languages li{
+	@include makeNull;
+	display: inline-block;
+}
+
+header .center .center_small .burger-language-data .languages li a{
+	@include makeNull;
+	padding: 0 10px;
+	display: block;
+	color: $color4;
+	text-decoration: none;
+	padding-top: 15px;
+	opacity: 0.5;
+	position: relative;
+	@include trans('opacity', '600ms');
+}
+
+header .center .center_small .burger-language-data .languages li a.active{
+	opacity: 1;
+}
+
+header .center .center_small .burger-language-data .languages li a.active::before{
+	@include makeNull;
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: $color4;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+header .center .center_small .burger-language-data .languages li a:hover{
+	opacity: 1;
+}
+
+header .center .center_small .burger-language-data .data-box{
+	@include makeNull;
+	width: 100%;
+	height: 350px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+
+header .center .center_small .burger-language-data .data-box ul{
+	@include makeNull;
+	list-style-type: none;
+}
+
+header .center .center_small .burger-language-data .data-box ul li{
+	@include makeNull;
+	display: block;
+	margin-bottom: 25px;
+	padding: 0 50px;
+}
+
+header .center .center_small .burger-language-data .data-box ul li:last-child{
+	margin-bottom: 0;
+}
+
+header .center .center_small .burger-language-data .data-box ul li h2{
+	@include makeNull;
+	color: $white;
+}
+
+header .center .center_small .burger-language-data .data-box ul li p{
+	@include makeNull;
+	color: $white;
+}
+
+header .center .contact-box{
+	@include makeNull;
+	position: absolute;
+	right: 0;
+	top: 222px;
+}
+
+header .center .contact-box a{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	position: relative;
+	float: left;
+	margin-right: 15px;
+	height: 44px;
+	border-radius: 22px;
+}
+
+header .center .contact-box a:last-child{
+	margin-right: 0px;
+}
+
+header .center .contact-box a.ask-call{
+	background-color: $color1;
+	color: $white;
+	padding: 0 12px 0 40px;
+	@include trans('background-color', '600ms');
+}
+
+header .center .contact-box a.ask-call:hover{
+	background-color: $color3;
+}
+
+header .center .contact-box a.ask-call::before{
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 15px;
+	top: calc(50% - 10px);
+	@include sprite('-180px -89px');
+	background-color: $white;
+}
+
+header .center .contact-box a.call{
+	background-color: $white;
+	border:solid 1px $color3;
+	color: $color3;
+	padding: 0 49px;
+	@include trans('border-color, color', '600ms');
+}
+
+header .center .contact-box a.call:hover{
+	border-color: $color1;
+	color: $color1;
+}
+
+.image-text{
+	@include makeNull;
+	width: 100%;
+	height: 742px;
+	position: relative;
+	z-index: 7;
+	display: none;
+}
+
+.image-text .image-box{
+	@include makeNull;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.image-text .image-box .image{
+	@include makeNull;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: -150%;
+	transform: scale(1.5);
+	background-size: cover;
+	background-position: center;
+	transition-property: left, transform;
+	transition-duration: 1200ms;
+	transition-timing-function: cubic-bezier(0.01, 0.02, 0.14, 1);
+}
+
+.image-text .image-box.moveNow .image{
+	transform: scale(1);
+	left: 0;
+}
+
+.image-text .center_small{
+	position: relative;
+	z-index: 2;
+}
+
+.height100{
+	height: 100%;
+}
+
+.multiplyColor{
+	mix-blend-mode: multiply;
+}
+
+.image-text .center_small .mainColorBg{
+	@include makeNull;
+	width: 273px;
+	height: 350px;
+	background-color: $color1;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	position: absolute;
+	top: 0;
+	right: 279px;
+}
+
+.image-text .center_small .mainColorBg2{
+	@include makeNull;
+	width: 568px;
+	height: calc(100% - 350px);
+	background-color: $color6;
+	border-radius: 20px;
+	position: absolute;
+	top: 350px;
+	left: 0;
+}
+
+.image-text .center_small .mainColorBg0{
+	@include makeNull;
+	width: 1000px;
+	height:350px;
+	background-color: $color1;
+	position: absolute;
+	top: 0;
+	left: -1000px;
+	opacity: 0;
+	@include trans('opacity', '600ms');
+}
+
+.image-text .center_small .mainColorBg0:hover{
+	opacity: 1;
+}
+
+.image-text .center_small .mainColorBg3{
+	@include makeNull;
+	width: 276px;
+	height:calc(100% - 350px);
+	background-color: $color6;
+	position: absolute;
+	bottom: 0;
+	right:0;
+	opacity: 0;
+	@include trans('opacity', '600ms');
+}
+
+.image-text .center_small .mainColorBg3:hover{
+	opacity: 1;
+}
+
+.image-text .center_small .mainColorBg4{
+	@include makeNull;
+	width: 1000px;
+	height:350px;
+	background-color: $color3;
+	position: absolute;
+	top: 0;
+	right:-1000px;
+	opacity: 0;
+	@include trans('opacity', '600ms');
+}
+
+.image-text .center_small .mainColorBg4:hover{
+	opacity: 1;
+}
+
+.image-text .text-box{
+	@include makeNull;
+	width: 100%;
+	height: calc(100% - 350px);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 3;
+	pointer-events: none;
+}
+
+.image-text .text-box .center_small .box{
+	@include makeNull;
+	width: 568px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: all;
+}
+
+.image-text .text-box .center_small .box h2,
+.image-text .text-box .center_small .box p{
+	@include makeNull;
+	color: $white
+}
+
+.image-text .text-box .center_small .box h2{
+	margin-bottom: 35px;
+}
+
+.navigation-box{
+	@include makeNull;
+	width: 100%;
+	height: 339px;
+	position: absolute;
+	top: -400px;
+	left: 0;
+	z-index: 10;
+	background-color: $color3;
+	@include trans('top', '600ms');
+	display: none;
+}
+
+.navOpened .navigation-box{
+	top: 0;
+}
+
+.navigation-box .center .close{
+	@include makeNull;
+	width: 44px;
+	height: 44px;
+	display: block;
+	text-decoration: none;
+	text-indent: -9999px;
+	position: relative;
+	margin: 70px auto 0 auto;
+}
+
+.navigation-box .center .close::after{
+	@include makeNull;
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include sprite('-52px -120px');
+	background-color: $color1;
+}
+
+.navigation-box .nav-box{
+	@include makeNull;
+	width: 100%;
+	height: 30px;
+	margin-top: 80px;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+
+.navigation-box .nav-box nav{
+	@include makeNull;
+	width: 100%;
+}
+
+.navigation-box .nav-box nav ul{
+	@include makeNull;
+	list-style-type: none;
+	text-align: center;
+}
+
+.navigation-box .nav-box nav ul li{
+	@include makeNull;
+	display: inline-block;
+	margin: 0 13px;
+}
+
+.navigation-box .nav-box nav ul li a{
+	@include makeNull;
+	text-decoration: none;
+	display: block;
+	color: $white;
+	@include trans('color', '600ms');
+}
+
+.navOpened .navigation-box .nav-box nav ul li a:hover{
+	color: $color1;
+}
+
+.navigation-box .nav-box .languages{
+	@include makeNull;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	list-style-type: none;
+}
+
+.navigation-box .nav-box .languages li{
+	@include makeNull;
+	display: inline-block;
+	margin: 0 5px;
+}
+.navigation-box .nav-box .languages li:last-child{
+	margin-right: 0px;
+}
+
+.navigation-box .nav-box .languages li a{
+	@include makeNull;
+	display: block;
+	height: 30px;
+	padding: 0 10px;
+	color: $white;
+	opacity: 0.5;
+	text-decoration: none;
+	@include trans('opacity', '600ms');
+}
+
+.navigation-box .nav-box .languages li:last-child a{
+	padding-right: 0px;
+}
+
+.navigation-box .nav-box .languages li a.active{
+	opacity: 1;
+	border-bottom: solid 1px $white;
+}
+
+.navigation-box .nav-box .languages li a:hover{
+	opacity: 1;
+}
+
+.fixed-menu{
+	@include makeNull;
+	width: 100%;
+	height: 152px;
+	position: fixed;
+	top: -155px;
+	left: 0;
+	z-index: 100;
+	background-color: red;
+	display: none;
+	@include dropShadow('0px', '3px', '6px', '3px', 'rgba(0,0,0,0.16)');
+	@include trans('top', '600ms');
+}
+
+.scrolled300 .fixed-menu{
+	top: 0px;
+}
+
+.fixed-menu .top{
+	@include makeNull;
+	width: 100%;
+	height: 62px;
+	background-color: $color3;
+}
+
+.fixed-menu .bottom{
+	@include makeNull;
+	width: 100%;
+	height: 90px;
+	background-color: $white;
+}
+
+.fixed-menu .top .live-video{
+	float: right;
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	color: $color3;
+	height: 26px;
+	border-radius: 22px;
+	background-color: $white;
+	padding: 0 20px 0 43px;
+	position: relative;
+	@include trans('background-color, color', '600ms');
+	pointer-events: all;
+	margin-top: 18px;
+}
+
+.fixed-menu .top .live-video::before{
+	@include makeNull;
+	content: "";
+	width: 18px;
+	height: 12px;
+	position: absolute;
+	top: calc(50% - 6px);
+	left: 15px;
+	@include sprite('-207px -94px');
+	background-color: $color3;
+}
+
+.fixed-menu .top .live-video:hover{
+	background-color: $color1;
+}
+
+.fixed-menu .top .social{
+	@include makeNull;
+	float: right;
+	list-style-type: none;
+	margin: 20px 32px 0 36px;
+}
+
+.fixed-menu .top .social li{
+	@include makeNull;
+	float: left;
+	margin: 0 0 0 20px;
+}
+
+.fixed-menu .top .social li:first-child{
+	margin-left: 0;
+}
+
+.fixed-menu .top .social li a{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	width: 22px;
+	height: 22px;
+	text-indent: -9999px;
+	position: relative;
+	@include trans('filter', '600ms');
+	pointer-events: all;
+}
+
+.fixed-menu .top .social li a:hover{
+	filter: grayscale(100%);
+}
+
+.fixed-menu .top .social li a::before{
+	@include makeNull;
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.fixed-menu .top .social li a.facebook::before{
+	@include sprite('-43px -89px', 'true');
+}
+
+.fixed-menu .top .social li a.instagram::before{
+	@include sprite('-70px -89px', 'true');
+}
+
+.fixed-menu .top .social li a.telegram::before{
+	@include sprite('-96px -89px', 'true');
+}
+
+.fixed-menu .top .social li a.whatsapp::before{
+	@include sprite('-151px -89px', 'true');
+}
+
+.fixed-menu .top .social li a.viber::before{
+	@include sprite('-124px -89px', 'true');
+}
+
+.fixed-menu .top .call{
+	float: right;
+	display: block;
+	color: $color1;
+	text-decoration: none;
+	position: relative;
+	padding-left: 22px;
+	@include trans('color', '600ms');
+}
+
+.fixed-menu .top .call::before{
+	content: "";
+	width:18px;
+	height:18px;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 9px);
+	@include sprite('-233px -90px');
+	background-color: $color1;
+	@include trans('background-color', '600ms');
+}
+
+.fixed-menu .top .call:hover{
+	color: $white;
+}
+
+.fixed-menu .top .call:hover::before{
+	background-color: $white;
+}
+
+.fixed-menu .bottom .logo{
+	@include makeNull;
+	width: 135px;
+	height: 44px;
+	display: block;
+	text-decoration: none;
+	text-indent: -9999px;
+	float: left;
+	margin-top: 23px;
+	position: relative;
+}
+
+.fixed-menu .bottom .logo::before{
+	@include makeNull;
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include sprite('-5px -174px', 'true');
+}
+
+.fixed-menu .bottom .nav-box{
+	@include makeNull;
+	float: right;
+}
+
+.fixed-menu .bottom .nav-box nav{
+	@include makeNull;
+	float: left;
+	height: 25px;
+	margin-top: 32.5px;
+}
+
+.fixed-menu .bottom .nav-box nav ul{
+	@include makeNull;
+	list-style-type: none;
+}
+
+.fixed-menu .bottom .nav-box nav ul li{
+	@include makeNull;
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.fixed-menu .bottom .nav-box nav ul li:last-child{
+	margin-right: 0;
+}
+
+.fixed-menu .bottom .nav-box nav ul li a{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	color: $color7;
+	position: relative;
+	@include trans('color', '600ms');
+}
+
+.fixed-menu .bottom .nav-box nav ul li a.active{
+	color: $color1;	
+}
+
+.fixed-menu .bottom .nav-box nav ul li a:hover{
+	color: $color1;
+}
+
+.fixed-menu .bottom .nav-box nav ul li a.active::after{
+	content: "";
+	width: 29px;
+	height: 4px;
+	background-color: $color1;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.fixed-menu .bottom .nav-box .languages{
+	@include makeNull;
+	float: left;
+	list-style-type: none;
+	margin-left: 15px;
+	height: 25px;
+	margin-top: 31.5px;
+}
+
+.fixed-menu .bottom .nav-box .languages li{
+	@include makeNull;
+	display: inline-block;
+	margin: 0 2px;
+}
+
+.fixed-menu .bottom .nav-box .languages li a{
+	@include makeNull;
+	display: block;
+	color: $color7;
+	text-decoration: none;
+	@include trans('color', '600ms');
+}
+
+.fixed-menu .bottom .nav-box .languages li a.active{
+	color: $color1;
+}
+
+.fixed-menu .bottom .nav-box .languages li a:hover{
+	color: $color1;
+}
+
+main{
+	@include makeNull;
+	display: none;
+}
+
+main .about{
+	@include makeNull;
+}
+
+main .about .center_small h2{
+	@include makeNull;
+	color: $color5;
+	margin: $spaceTitle;
+	padding: 0 20px;
+}
+
+main .about .center_small .content{
+	@include makeNull;
+	position: relative;
+}
+
+main .about .center_small .content .outside-left{
+	@include makeNull;
+	position: absolute;
+	height: 408px;
+	border-radius: 20px;
+	top: 0;
+	overflow: hidden;
+	z-index: 2;
+}
+
+main .about .center_small .content .outside-left .image{
+	@include makeNull;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: center;
+	@include trans('transform', '600ms');
+}
+
+main .about .center_small .content .outside-left:hover .image{
+	transform: scale(1.2);
+}
+
+main .about .center_small .content .outside-right{
+	@include makeNull;
+	position: absolute;
+	height: 408px;
+	border-radius: 20px;
+	top: 0;
+	overflow: hidden;
+	z-index: 2;
+}
+
+main .about .center_small .content .outside-right .image{
+	@include makeNull;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: center;
+	@include trans('transform', '600ms');
+}
+
+main .about .center_small .content .outside-right:hover .image{
+	transform: scale(1.2);
+}
+
+main .about .center_small .content .text{
+	@include makeNull;
+	width: calc(100% - 276px);
+	padding: 0 15px;
+	float: left;
+	position: relative;
+	z-index: 1;
+}
+
+main .about .center_small .content .text p{
+	@include makeNull;
+	color: $color6;
+	padding-bottom: 150px;
+}
+
+main .about .center_small .content .text .data-list{
+	@include makeNull;
+	width: 100%;
+	position: relative;
+	list-style-type: none;
+	padding: 35px 0;
+}
+
+main .about .center_small .content .text .data-list::before{
+	content: "";
+	width: 400%;
+	height: 100%;
+	position: absolute;
+	left: -150%;
+	top: 0;
+	background-color: $color1;
+	z-index: 1;
+}
+
+main .about .center_small .content .text .data-list li{
+	@include makeNull;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 74px;
+	margin-bottom: 12px;
+	background-color: $color1;
+	@include trans('background-color', '600ms');
+}
+
+main .about .center_small .content .text .data-list li:hover{
+	background-color: transparent;
+}
+
+main .about .center_small .content .text .data-list li .before{
+	@include makeNull;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color: $color5;
+	border-radius: 20px;
+	mix-blend-mode: multiply;
+}
+
+main .about .center_small .content .text .data-list li:last-child{
+	margin-bottom: 0;
+}
+
+main .about .center_small .content .text .data-list li p{
+	@include makeNull;
+	color: $white;
+	padding-left: 115px;
+	position: relative;
+	z-index: 2;
+}
+
+main .about .center_small .content .inside-image{
+	@include makeNull;
+	width: 260px;
+	height: 408px;
+	border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+	z-index: 2;
+}
+
+main .about .center_small .content .inside-image .image{
+	@include makeNull;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: center;
+	@include trans('transform', '600ms');
+}
+
+main .about .center_small .content .inside-image:hover .image{
+	transform: scale(1.2);
+}

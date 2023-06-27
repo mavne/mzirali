@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Roboto _GEO Mt';
+    src: url('Roboto_GEOMtBold.eot');
+    src: url('Roboto_GEOMtBold.eot?#iefix') format('embedded-opentype'),
+        url('Roboto_GEOMtBold.woff2') format('woff2'),
+        url('Roboto_GEOMtBold.woff') format('woff'),
+        url('Roboto_GEOMtBold.ttf') format('truetype'),
+        url('Roboto_GEOMtBold.svg#Roboto_GEOMtBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

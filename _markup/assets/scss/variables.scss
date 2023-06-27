@@ -1,0 +1,84 @@
+@mixin trans($property, $duration) {
+  transition-property: #{$property};
+  transition-duration: #{$duration};
+  transition-timing-function: ease-in-out;
+}
+
+@mixin scroll($width, $track, $thumb, $thumbHover) {
+  /* width */
+	::-webkit-scrollbar {
+	  width: #{$width};
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+	  background: #{$track}; 
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background: #{$thumb}; 
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+	  background: #{$thumbHover}; 
+	}
+}
+
+@mixin dropShadow($x, $y, $blur, $spread, $color){
+	-webkit-box-shadow: #{$x} #{$y} #{$blur} #{$spread} #{$color}; 
+	box-shadow: #{$x} #{$y} #{$blur} #{$spread} #{$color};
+}
+
+@mixin pointer {
+	user-select: none;
+	cursor: pointer;
+	pointer-events: all;
+}
+
+@mixin makeNull {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0 !important;
+}
+
+@mixin sprite($position, $image:false, $version:1) {
+	@if $image{
+		-webkit-background-image: url('../img/sprite.svg?v=#{$version}');
+		background-image: url('../img/sprite.svg?v=#{$version}');
+		-webkit-background-size: auto;
+		background-size: auto;
+		-webkit-background-repeat: no-repeat;	
+		background-repeat: no-repeat;	
+		-webkit-background-position: #{$position};
+		background-position: #{$position};
+	}@else{
+		-webkit-mask-image: url('../img/sprite.svg?v=#{$version}');
+		mask-image: url('../img/sprite.svg?v=#{$version}');
+		-webkit-mask-size: auto;
+		mask-size: auto;
+		-webkit-mask-repeat: no-repeat;	
+		mask-repeat: no-repeat;	
+		-webkit-mask-position: #{$position};
+		mask-position: #{$position};
+	}
+}
+
+$center: 1640px;
+$center_small: 1120px;
+
+$rgba1: rgba(202,202,202, 0.6);
+
+$color1: #E1A225;
+$color2: #0A2E4E;
+$color3: #0D2E4E;
+$color4: #262626;
+$color5: #CACACA;
+$color6: #275D7C;
+$color7: #848685;
+$white: #ffffff;
+
+$spaceTitle: 85px 0;
+

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Roboto _Nusx';
+    src: url('RobotoNusx.eot');
+    src: url('RobotoNusx.eot?#iefix') format('embedded-opentype'),
+        url('RobotoNusx.woff2') format('woff2'),
+        url('RobotoNusx.woff') format('woff'),
+        url('RobotoNusx.ttf') format('truetype'),
+        url('RobotoNusx.svg#RobotoNusx') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
