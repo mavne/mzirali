@@ -8,12 +8,12 @@ $version = "1.0.4";
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="/_markup/assets/img/favicon.png" type="image/svg" sizes="32x32">
 	<title>Mzirali</title>
-	<link rel="stylesheet" type="text/css" href="/_markup/assets/bootstrap/css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="/_markup/assets/owl/owl.carousel.min.css" />
-	<link rel="stylesheet" href="/_markup/assets/lightbox/jquery.lightbox.css" />
-	<link rel="stylesheet" type="text/css" href="/_markup/assets/css/main.css?v=<?=$version?>" />
-	<link rel="stylesheet" type="text/css" href="/_markup/assets/css/ge.css?v=<?=$version?>" />
-	<link rel="stylesheet" type="text/css" href="/_markup/assets/css/responsive_ge.css?v=<?=$version?>" />
+	<link rel="stylesheet" type="text/css" href="/_markup/assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/_markup/assets/owl/owl.carousel.min.css">
+	<link rel="stylesheet" href="/_markup/assets/lightbox/jquery.lightbox.css">
+	<link rel="stylesheet" type="text/css" href="/_markup/assets/css/main.css?v=<?=$version?>">
+	<link rel="stylesheet" type="text/css" href="/_markup/assets/css/ge.css?v=<?=$version?>">
+	<link rel="stylesheet" type="text/css" href="/_markup/assets/css/responsive_ge.css?v=<?=$version?>">
 </head>
 <body>
 
@@ -195,9 +195,49 @@ $version = "1.0.4";
 	<section class="call-request">
 		<div class="center_small">
 			<a href="" class="ask-call">შეუკვეთე ზარი</a>
-			<p>კომფორტული საცხოვრებელი სივრცე, შესანიშნავი  ლოკაცია, მომგებიანი ინვესტიცია!</p>
+			<h2>კომფორტული საცხოვრებელი სივრცე, შესანიშნავი  ლოკაცია, მომგებიანი ინვესტიცია!</h2>
 
 			<div class="clearer"></div>
+		</div>
+	</section>
+
+	<section class="main-advantages">
+		<div class="center_small">
+			<h2>მთავარი უპირატესობები</h2>
+
+			<div class="list-box">
+				<ul>
+					<li>
+						<em class="house"></em>
+						<p>მცირე-მასშტაბიანი განაშენიანება</p>
+					</li>
+
+					<li>
+						<em class="invest"></em>
+						<p>ურისკო და შემოსავლიანი ინვესტიცია</p>
+					</li>
+
+					<li>
+						<em class="destination"></em>
+						<p>მომგებიანი ადგილმდებარეობა</p>
+					</li>
+
+					<li>
+						<em class="cozy"></em>
+						<p>მშვიდი და კომფორტული გარემო</p>
+					</li>
+
+					<li>
+						<em class="quality"></em>
+						<p>ხარისხიანი მშენებლობა</p>
+					</li>
+
+					<li>
+						<em class="nearsee"></em>
+						<p>ზღვასთან სიახლოვე</p>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</section>
 </main>
@@ -208,11 +248,11 @@ $version = "1.0.4";
 
 
 
-<script type="text/javascript" src="/_markup/assets/js/jquery.js"></script>
-<script type="text/javascript" src="/_markup/assets/lightbox/jquery.lightbox.js"></script>
-<script type="text/javascript" src="/_markup/assets/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/_markup/assets/js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="/_markup/assets/js/main.js?v=<?=$version?>"></script>
+<script src="/_markup/assets/js/jquery.js"></script>
+<script src="/_markup/assets/lightbox/jquery.lightbox.js"></script>
+<script src="/_markup/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="/_markup/assets/js/owl.carousel.min.js"></script>
+<script src="/_markup/assets/js/main.js?v=<?=$version?>"></script>
 </body>
 
 </html>

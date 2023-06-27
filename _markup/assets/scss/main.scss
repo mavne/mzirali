@@ -1344,7 +1344,7 @@ main .call-request .ask-call:hover{
 	color: $white;
 }
 
-main .call-request p{
+main .call-request h2{
 	@include makeNull;
 	max-width: 536px;
 	padding-right: 90px;
@@ -1354,6 +1354,6 @@ main .call-request p{
 	@include transCubic('transform', '1200ms');
 }
 
-main .call-request.g-visible p{
+main .call-request.g-visible h2{
 	transform: translateY(0px);
 }
