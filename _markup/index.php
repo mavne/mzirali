@@ -6,7 +6,7 @@ $version = "1.0.4";
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="/_markup/assets/img/favicon.svg" type="image/svg" sizes="32x32">
+	<link rel="icon" href="/_markup/assets/img/favicon.png" type="image/svg" sizes="32x32">
 	<title>Mzirali</title>
 	<link rel="stylesheet" type="text/css" href="/_markup/assets/bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="/_markup/assets/owl/owl.carousel.min.css" />
@@ -161,19 +161,19 @@ $version = "1.0.4";
 					<p>"მზირალი“ საცხოვრებელი და საინვესტიციო კომპლექსი შავი ზღვის სანაპიროზე, სადაც ყველა პირობაა შექმნილი მშვიდი, ხარისხიანი და კომფორტული ცხოვრებისთვის და დასვენებისთვის. აქაური გარემო ეკოლოგიურად სუფთა და ჯანსაღია, რასაც ზღვისა და მთის უნიკალური მიკროკლიმატი და უსუფთავესი ზღვის წყალი განაპირობებს. კომპლექსი ორი, 9 და 11 სართულიანი ბლოკისგან შედგება. თითოეულ სართულზე   მაქსიმუმ 5 ბინა განლაგდება. ყველა ბინა მზიანი და ნათელია. ბინებიდან იშლება ზღვისა და მთის ულამაზესი პანორამული ხედები, რაც აქ დასვენებას თუ ცხოვრებას ერთნაირად სასიამოვნოს ხდის. მშენებლობის პროცესში გამოყენებულია მხოლოდ ხარისხიანი სამშენებლო მასალები</p>
 
 					<ul class="data-list">
-						<li>
+						<li data-aos="fade-down">
 							<div class="before"></div>
 							<em class="flat"></em>
 							<p>ბინების ჯამური რაოდენობა: 80</p>
 						</li>
 
-						<li>
+						<li data-aos="fade-down">
 							<div class="before"></div>
 							<em class="calendar"></em>
 							<p>მშენებლობის დასრულება: 2024 წლის ბოლო </p>
 						</li>
 
-						<li>
+						<li data-aos="fade-down">
 							<div class="before"></div>
 							<em class="guarantee"></em>
 							<p>3 წლიანი გარანტია რემონტზე და კარ-ფანჯრებზე </p>
@@ -206,6 +206,9 @@ $version = "1.0.4";
 <script type="text/javascript" src="/_markup/assets/js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="/_markup/assets/js/main.js?v=<?=$version?>"></script>
 <script type="text/javascript" src="/_markup/assets/aos/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 
 </html>
