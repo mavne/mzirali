@@ -1522,7 +1522,7 @@ main .infrastructure .boxes{
 main .infrastructure .boxes .box1{
 	@include makeNull;
 	flex-basis: 35%;
-	transform: translateY(400px);
+	transform: translateX(400px);
 	@include transCubic('transform', '1200ms');
 }
 
@@ -1530,14 +1530,14 @@ main .infrastructure .boxes .box2{
 	@include makeNull;
 	flex-basis: calc(30% - 30px);
 	margin: 0 15px;
-	transform: translateY(400px);
+	transform: translateX(400px);
 	@include transCubic('transform', '1600ms');
 }
 
 main .infrastructure .boxes .box3{
 	@include makeNull;
 	flex-basis: 35%;
-	transform: translateY(400px);
+	transform: translateX(400px);
 	@include transCubic('transform', '2000ms');
 }
 
@@ -1547,7 +1547,7 @@ main .infrastructure .boxes .box{
 }
 
 main .infrastructure.g-visible .boxes .box{
-	transform: translateY(0px);
+	transform: translateX(0px);
 }
 
 main .infrastructure .boxes .box .image-box{
@@ -1681,4 +1681,274 @@ main .infrastructure .boxes .box3 .image-box::after{
 
 main .infrastructure .boxes .box3 .content::before{
 	background-color: $color1;
+}
+
+main .services{
+	@include makeNull;
+}
+
+main .services .center h2{
+	@include makeNull;
+	text-align: center;
+	padding: 85px 0;
+	color: $color5;
+	transform: translateY(-100px);
+	@include transCubic('transform', '1200ms');
+}
+
+main .services.g-visible .center h2{
+	transform: translateY(0px);
+}
+
+main .services .center .boxes{
+	@include makeNull;
+}
+
+main .services .center .boxes .box{
+	@include makeNull;
+	width: 25%;
+	min-height: 165px;
+	position: relative;
+	float: left;
+	padding: 20px 0;
+	transform: translateY(200px);
+	@include transCubic('transform', '1200ms');
+}
+
+main .services.g-visible .center .boxes .box{
+	transform: translateY(0px);
+}
+
+main .services .center .boxes .box::before{
+	content: "";
+	width: 1px;
+	height: 100%;
+	background-color: $color5;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+main .services .center .boxes .box.last::after{
+	content: "";
+	width: 1px;
+	height: 100%;
+	background-color: $color5;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+main .services .center .boxes .box em{
+	@include makeNull;
+	display: block;
+	margin: 0 auto;
+	width: 90px;
+	height: 90px;
+	position: relative;
+}
+
+main .services .center .boxes .box em::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: $color1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include trans('background-color', '600ms');
+}
+
+main .services .center .boxes .box em.manage::before{
+	@include sprite('-4px -395px');
+}
+
+main .services .center .boxes .box em.clean::before{
+	@include sprite('-133px -395px');
+}
+
+main .services .center .boxes .box em.rent::before{
+	@include sprite('-260px -405px');
+}
+
+main .services .center .boxes .box em.video::before{
+	@include sprite('-264px 1px');
+}
+
+main .services .center .boxes .box p{
+	@include makeNull;
+	padding-top: 30px;
+	text-align: center;
+	color: $color3;
+	@include trans('color', '600ms');
+}
+
+main .services .center .boxes .box:hover em::before{
+	background-color: $color8;
+}
+main .services .center .boxes .box:hover p{
+	color: $color8;
+}
+
+main .conditions h2{
+	@include makeNull;
+	text-align: center;
+	padding: 85px 0;
+	color: $color5;
+	transform: translateY(-100px);
+	@include transCubic('transform', '1200ms');
+}
+
+main .conditions.g-visible h2{
+	transform: translateY(0px);
+}
+
+main .conditions .boxes{
+	@include makeNull;
+	width: 100%;
+	height: 636px;
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+}
+
+main .conditions .boxes .bg{
+	@include makeNull;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	background-size: cover;
+	background-position: top center;
+	@include transCubic('transform', '1600ms');
+	transform: translateX(-100%);
+}
+
+main .conditions.g-visible .boxes .bg{
+	transform: translateX(0px);
+}
+
+main .conditions .boxes .multi-top-left{
+	@include makeNull;
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	background-color: $color8;
+	mix-blend-mode: multiply;
+}
+
+main .conditions .boxes .multi-bottom-left{
+	@include makeNull;
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+	background-color: $color1;
+	mix-blend-mode: multiply;
+}
+
+main .conditions .boxes .multi-top-right{
+	@include makeNull;
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	background-color: $color3;
+	mix-blend-mode: multiply;
+}
+
+main .conditions .boxes .left{
+	@include makeNull;
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+
+main .conditions .boxes .left .top{
+	@include makeNull;
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main .conditions .boxes .left .top p{
+	@include makeNull;
+	width: 70%;
+	height: 70px;
+	color: $white;
+	text-align: center;
+	border: solid 1px rgba(255,255,255,0.5);
+	background-color: transparent;
+	@include trans('border-color, background-color', '600ms');
+}
+
+main .conditions .boxes .left .bottom{
+	@include makeNull;
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main .conditions .boxes .left .bottom p{
+	@include makeNull;
+	width: 70%;
+	height: 70px;
+	color: $white;
+	text-align: center;
+	border: solid 1px rgba(255,255,255,0.5);
+	background-color: transparent;
+	@include trans('border-color, background-color', '600ms');
+}
+
+main .conditions .boxes .top-right{
+	@include makeNull;
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main .conditions .boxes .top-right p{
+	@include makeNull;
+	width: 70%;
+	height: 70px;
+	color: $white;
+	text-align: center;
+	border: solid 1px rgba(255,255,255,0.5);
+	background-color: transparent;
+	@include trans('border-color, background-color', '600ms');
+}
+
+main .conditions .boxes .left .top p:hover,
+main .conditions .boxes .left .bottom p:hover,
+main .conditions .boxes .top-right p:hover{
+	background-color: $color1;
+	border-color: $color1;
 }

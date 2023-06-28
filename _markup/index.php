@@ -291,6 +291,60 @@ $version = "1.0.5";
 			</div>
 		</div>
 	</section>
+
+	<section class="services">
+		<div class="center">
+			<h2>სერვისები</h2>
+
+			<div class="boxes">
+				<div class="box">
+					<em class="manage"></em>
+					<p>კომპლექსის მართვა</p>
+				</div>
+
+				<div class="box">
+					<em class="clean"></em>
+					<p>დალაგება დასუფთავება</p>
+				</div>
+
+				<div class="box">
+					<em class="rent"></em>
+					<p>გაქირავება</p>
+				</div>
+
+				<div class="box last">
+					<em class="video"></em>
+					<p>24/7 ვიდეო მეთვალყურეობა</p>
+				</div>
+
+				<div class="clearer"></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="conditions">
+		<h2>ბინის ჩაბარების პირობები</h2>
+		<div class="boxes">
+			<div class="bg" style="background-image:url('/_markup/assets/img/condition.jpg')"></div>
+			<div class="multi-top-left"></div>
+			<div class="multi-top-right"></div>
+			<div class="multi-bottom-left"></div>
+
+			<div class="left">
+				<div class="top">
+					<p>თეთრი კარკასი</p>
+				</div>
+
+				<div class="bottom">
+					<p>რემონტით, ავეჯით და ტექნიკით</p>
+				</div>
+			</div>
+			
+			<div class="top-right">
+				<p>კოსმეტიკური რემონტი</p>
+			</div>
+		</div>
+	</section>
 </main>
 
 <footer>
