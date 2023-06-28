@@ -50,7 +50,7 @@
 	outline:0 !important;
 }
 
-@mixin sprite($position, $image:false, $version:5) {
+@mixin sprite($position, $image:false, $version:7) {
 	@if $image{
 		-webkit-background-image: url('../img/sprite.svg?v=#{$version}');
 		background-image: url('../img/sprite.svg?v=#{$version}');
@@ -92,6 +92,7 @@ $color4: #262626;
 $color5: #CACACA;
 $color6: #275D7C;
 $color7: #848685;
+$color8: #5D5E5E;
 $white: #ffffff;
 
 $spaceTitle: 85px 0;

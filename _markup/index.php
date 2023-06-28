@@ -1,5 +1,5 @@
 <?php 
-$version = "1.0.4";
+$version = "1.0.5";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -237,6 +237,57 @@ $version = "1.0.4";
 						<p>ზღვასთან სიახლოვე</p>
 					</li>
 				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="infrastructure">
+		<h2>ინფრასტრუქტურა</h2>
+
+		<div class="boxes">
+			<div class="box box1">
+				<div class="image-box">
+					<div class="image" style="background-image:url('/_markup/assets/img/infra1.jpg')">image</div>
+					<div class="title">პარკინგი</div>
+				</div>
+
+				<div class="content">
+					<ul>
+						<li><span>ეკო პარკინგის ზონა</span></li>
+						<li><span>ელექტრომობილების დამმუხტველი</span></li>
+						<li><span>ველო პარკინგი</span></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="box box2">
+				<div class="image-box">
+					<div class="image" style="background-image:url('/_markup/assets/img/infra2.jpg')">image</div>
+					<div class="title">მულტიფუნქციური სახურავი</div>
+				</div>
+
+				<div class="content">
+					<ul>
+						<li><span>პანორამული რესტორანი სახურავზე</span></li>
+						<li><span>პანორამული აუზი სახურავზე</span></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="box box3">
+				<div class="image-box">
+					<div class="image" style="background-image:url('/_markup/assets/img/infra3.jpg')">image</div>
+					<div class="title">სხვა</div>
+				</div>
+
+				<div class="content">
+					<ul>
+						<li><span>ლობი და რეცეფცია</span></li>
+						<li><span>გამწვანებული ეზო</span></li>
+						<li><span>ფიტნეს ცენტრი</span></li>
+						<li><span>ჭკვიანი სახლის ელემენტები სურვილისამებრ</span></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</section>

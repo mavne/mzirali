@@ -152,6 +152,7 @@ class Advantages{
 	}
 }
 
+
 /* Header */
 var loader = new Loader;
 loader.run();
