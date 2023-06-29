@@ -345,6 +345,94 @@ $version = "1.0.5";
 			</div>
 		</div>
 	</section>
+
+	<section class="choose-flat">
+		<div class="center">
+			<div class="top">
+				<h2>აირჩიეთ ბინა:</h2>
+				<a href="">აირჩიე ბინის სართულის მიხედვით</a>
+				<div class="clearer"></div>
+			</div>
+
+			<div class="owl-carousel owl-theme" id="chooseFlatOwl">
+			    <a href="" class="item">
+			    	<div class="image-box">
+			    		<div class="image" style="background-image:url('/_markup/assets/img/room.jpg')"></div>
+			    	</div>
+
+			    	<div class="multi"></div>
+
+			    	<p>ბინის ზომა: 65m2</p>
+			    </a>
+
+			    <a href="" class="item">
+			    	<div class="image-box">
+			    		<div class="image" style="background-image:url('/_markup/assets/img/room.jpg')"></div>
+			    	</div>
+
+			    	<div class="multi"></div>
+
+			    	<p>ბინის ზომა: 65m2</p>
+			    </a>
+
+			    <a href="" class="item">
+			    	<div class="image-box">
+			    		<div class="image" style="background-image:url('/_markup/assets/img/room.jpg')"></div>
+			    	</div>
+
+			    	<div class="multi"></div>
+
+			    	<p>ბინის ზომა: 65m2</p>
+			    </a>
+
+			    <a href="" class="item">
+			    	<div class="image-box">
+			    		<div class="image" style="background-image:url('/_markup/assets/img/room.jpg')"></div>
+			    	</div>
+
+			    	<div class="multi"></div>
+
+			    	<p>ბინის ზომა: 65m2</p>
+			    </a>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="benefits">
+		<div class="center">
+			<div class="left">
+				<h2>შეიძინეთ ბინა "მზირალში"<br>და მიიღეთ მაქსიმალური სარგებელი:</h2>
+
+				<ul>
+					<li><span>პროექტის დასრულების შემდეგ ბათუმი რივიერაში ბინების ღირებულება მინიმუმ 10%-ით გაიზრდება!</span></li>
+					<li><span>დაგვიკავშირდით ეხლავე და მიიღეთ ფასდაკლება ან გადახდის პირობებისსაუკეთესო ფორმულა ჩვენი გაყიდვების მენეჯერისგან!</span></li>
+				</ul>
+			</div>
+
+			<div class="right">
+				<a href="" class="ask-call">მოითხოვე ზარი</a>
+			</div>
+
+			<div class="clearer"></div>
+		</div>
+	</section>
+
+	<section class="tech">
+		<div class="bg"></div>
+		<div class="multi"></div>
+		<div class="right">
+			<h2>ტექნიკური<br>მახასიათებლები</h2>
+
+			<ul>
+				<li><em></em> <span>შუშის აივნები</span></li>
+				<li><em></em> <span>ალუკაბონდის ფასადი</span></li>
+				<li><em></em> <span>პანორამული ლიფტები</span></li>
+				<li><em></em> <span>3 წლიანი გარანტია კარ-ფანჯრებზე</span></li>
+				<li><em></em> <span>3 წლიანი გარანტია რემონტზე</span></li>
+			</ul>
+		</div>
+	</section>
 </main>
 
 <footer>
@@ -358,6 +446,24 @@ $version = "1.0.5";
 <script src="/_markup/assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="/_markup/assets/js/owl.carousel.min.js"></script>
 <script src="/_markup/assets/js/main.js?v=<?=$version?>"></script>
+<script>
+	$('#chooseFlatOwl').owlCarousel({
+    loop:true,
+    margin:15,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+</script>
 </body>
 
 </html>

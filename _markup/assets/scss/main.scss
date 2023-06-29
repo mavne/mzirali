@@ -1952,3 +1952,269 @@ main .conditions .boxes .top-right p:hover{
 	background-color: $color1;
 	border-color: $color1;
 }
+
+main .choose-flat{
+	@include makeNull;
+	position: relative;
+}
+
+main .choose-flat::after{
+	@include makeNull;
+	content: "";
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: $color1;
+	z-index: 1;
+	mix-blend-mode: multiply;
+}
+
+main .choose-flat .center .top{
+	@include makeNull;
+	padding: 85px 0;
+	position: relative;
+	z-index: 2;
+}
+
+main .choose-flat .center .top h2{
+	@include makeNull;
+	width: 50%;
+	float: left;
+	color: $color5;
+	transform: translateX(-200px);
+	@include trans('transform', '600ms');
+}
+
+main .choose-flat .center .top a{
+	@include makeNull;
+	display: block;
+	float: right;
+	color: $color3;
+	background-color: $white;
+	border-radius: 47px;
+	padding: 0 40px;
+	text-decoration: none;
+	margin-right: 240px;
+	border: solid 1px $color1;
+	@include trans('transform, background-color, border-color, color', '600ms');
+	transform: translateX(200px);
+}
+
+main .choose-flat.g-visible .center .top h2,
+main .choose-flat.g-visible .center .top a{
+	transform: translateX(0px);
+}
+
+main .choose-flat .center .top a:hover{
+	background-color: $color3;
+	border-color: $color3;
+	color: $white;
+}
+
+main .choose-flat .center #chooseFlatOwl{
+	@include makeNull;
+	position: relative;
+	z-index: 2;
+	transform: translateX(-1000px);
+	@include transCubic('transform', '1200ms');
+}
+
+main .choose-flat.g-visible .center #chooseFlatOwl{
+	transform: translateX(0px);
+}
+
+main .choose-flat .center #chooseFlatOwl .item{
+	@include makeNull;
+	height: 520px;
+	position: relative;
+	border: solid 1px $color1;
+	border-radius: 20px;
+	overflow: hidden;
+	background-color: white;
+	text-decoration: none;
+	display: block;
+}
+
+main .choose-flat .center #chooseFlatOwl .item .image-box{
+	@include makeNull;
+	width: 100%;
+	height: calc(100% - 40px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	overflow: hidden;
+}
+
+main .choose-flat .center #chooseFlatOwl .item .image-box .image{
+	@include makeNull;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	@include trans('transform', '600ms');
+}
+
+main .choose-flat .center #chooseFlatOwl .item .image-box:hover .image{
+	transform: scale(1.2);
+}
+
+main .choose-flat .center #chooseFlatOwl .item .multi{
+	@include makeNull;
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 2;
+	background-color: $color5;
+	mix-blend-mode: multiply;
+}
+
+main .choose-flat .center #chooseFlatOwl .item p{
+	@include makeNull;
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	color: $white;
+	z-index: 3;
+}
+
+main .choose-flat .center #chooseFlatOwl .owl-nav{
+	@include makeNull;
+	padding: 50px 250px 75px 250px;
+	height: 25px;
+}
+
+main .choose-flat .center #chooseFlatOwl .owl-nav button{
+	@include makeNull;
+	width: 28px;
+	height: 28px;
+	text-indent: -9999px;
+	position: relative;
+}
+
+main .choose-flat .center #chooseFlatOwl .owl-nav button.owl-prev{
+	float: left;
+}
+
+main .choose-flat .center #chooseFlatOwl .owl-nav button.owl-next{
+	float: right;
+}
+
+main .choose-flat .center #chooseFlatOwl .owl-nav button::after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include sprite('-311px -90px');
+	background-color: $color6;
+	@include trans('background-color', '600ms');
+}
+
+main .choose-flat .center #chooseFlatOwl .owl-nav button.owl-next::after{
+	transform: rotate(180deg);
+}
+
+main .choose-flat .center #chooseFlatOwl .owl-nav button:hover::after{
+	background-color: $color5;
+}
+
+main .benefits{
+	@include makeNull;
+	background-color: $color3;
+	padding: 65px 0;
+}
+
+main .benefits .center .left{
+	@include makeNull;
+	width: 50%;
+	float: left;
+	transform: translateX(-200px);
+	@include transCubic('transform', '1200ms');
+}
+
+main .benefits.g-visible .center .left{
+	transform: translateX(0px);
+}
+
+main .benefits .center .left h2{
+	@include makeNull;
+	color: $color1;
+	padding-left: 50px;
+}
+
+main .benefits .center .left ul{
+	@include makeNull;
+	list-style-type: none;
+	margin-top: 35px;
+}
+
+main .benefits .center .left ul li{
+	@include makeNull;
+	padding: 5px 50px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+main .benefits .center .left ul li:last-child{
+	margin-bottom: 0px;	
+}
+
+main .benefits .center .left ul li::before{
+	@include makeNull;
+	content: "";
+	width: 10px;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: $color1;
+}
+
+main .benefits .center .left ul li span{
+	@include makeNull;
+	color: $white;
+	display: block;
+}
+
+main .benefits .center .right{
+	@include makeNull;
+	width: 50%;
+	float: left;
+	transform: translateX(200px);
+	@include transCubic('transform', '1200ms');
+}
+
+main .benefits.g-visible .center .right{
+	transform: translateX(0px);
+}
+
+main .benefits .center .right a{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	padding: 0 55px;
+	background-color: $white;
+	color: $color1;
+	float: left;
+	margin-left: 138px;
+	margin-top: 130px;
+	border-radius: 47px;
+	@include trans('background-color', '600ms');
+}
+
+main .benefits .center .right a:hover{
+	background-color: $color5;
+}
