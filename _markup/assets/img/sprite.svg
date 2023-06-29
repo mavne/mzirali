@@ -131,6 +131,10 @@
         stroke: #275d7c;
         stroke-width: 2px;
       }
+
+      .cls-32 {
+        clip-path: url(#clip-path-9);
+      }
     </style>
     <clipPath id="clip-path">
       <rect class="cls-1" width="232.19" height="70.24"/>
@@ -176,6 +180,9 @@
     </clipPath>
     <clipPath id="clip-path-7">
       <rect class="cls-1" x="1.95" y="174.59" width="141.69" height="52.84"/>
+    </clipPath>
+    <clipPath id="clip-path-9">
+      <rect id="SVGID" class="cls-1" x="315" y="134" width="22.01" height="22.01"/>
     </clipPath>
   </defs>
   <title>sprite</title>
@@ -400,5 +407,13 @@
   <g id="arrow-right-circle">
     <path id="Path_25237" data-name="Path 25237" class="cls-31" d="M325.78,117,313,104.19l12.78-12.78"/>
     <line id="Line_20" data-name="Line 20" class="cls-31" x1="339.28" y1="104.19" x2="313.28" y2="104.19"/>
+  </g>
+  <g id="ticker">
+    <g class="cls-32">
+      <g id="Group_24043" data-name="Group 24043">
+        <path id="Path_107593" data-name="Path 107593" class="cls-5" d="M336.45,141.55l-2.36,2.8a4.75,4.75,0,0,1,0,.65,8.1,8.1,0,1,1-4.51-7.27l2.13-2.11A10.72,10.72,0,0,0,326,134a11,11,0,1,0,11,11h0A11,11,0,0,0,336.45,141.55Z"/>
+        <path id="Path_107594" data-name="Path 107594" class="cls-5" d="M324.57,142a1,1,0,0,0-1.44,0l-1.25,1.13a1,1,0,0,0-.09,1.44l3.1,3.68.74.88a1.06,1.06,0,0,0,1.49.11.57.57,0,0,0,.11-.11l.74-.88,7.74-9.17a1,1,0,0,0-.09-1.44l-.77-.7a1,1,0,0,0-1.43,0l-7,6.93Z"/>
+      </g>
+    </g>
   </g>
 </svg>

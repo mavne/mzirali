@@ -419,7 +419,7 @@ $version = "1.0.5";
 	</section>
 
 	<section class="tech">
-		<div class="bg"></div>
+		<div class="bg" style="background-image: url('/_markup/assets/img/tech.jpg')"></div>
 		<div class="multi"></div>
 		<div class="right">
 			<h2>ტექნიკური<br>მახასიათებლები</h2>
@@ -436,7 +436,57 @@ $version = "1.0.5";
 </main>
 
 <footer>
+	<h2>პროექტის ადგილმდებარეობა</h2>
 
+	<div class="map"></div>
+
+	<div class="center_small topMinus25">
+		<div class="data">
+			<div class="multi"></div>
+			<ul>
+				<li><span>ბათუმის საერთაშორისო<br>აეროპორტი 6კმ.</span></li>
+				<li><span>ქუთაისის საერთაშორისო<br>ეროპორტი 129 კმ.</span></li>
+				<li><span>რიზე-ართვინის აეროპორტი<br>84 კმ.</span></li>
+				<li><span>ტრაბზონის აეროპორტი<br>188 კმ.</span></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="center">
+		<h3>საქართველო, გონიო</h3>
+
+		<div class="contact-data">
+			<div class="multi"></div>
+			<div class="center_small">
+				<div class="social">
+					<ul>
+						<li><a href="" class="facebook">facebook</a></li>
+						<li><a href="" class="instagram">instagram</a></li>
+					</ul>
+				</div>
+
+				<div class="messages">
+					<ul>
+						<li><a href="" class="whatsapp">whatsapp</a></li>
+						<li><a href="" class="viber">viber</a></li>
+						<li><a href="" class="call">+995 595 06 23 23</a></li>
+					</ul>
+				</div>
+
+				<div class="mailto">
+					<a href="" class="mail">mzirali@gmail.com</a>
+				</div>
+
+				<a href="" class="ask-call">ზარის მოთხოვნა</a>
+			</div>
+		</div>
+
+		<div class="copyright">
+			<p>ყველა უფლება დაცულია ©2023</p>
+
+			<a href="" class="shindi">shindi</a>
+		</div>
+	</div>
 </footer>
 
 
@@ -445,24 +495,24 @@ $version = "1.0.5";
 <script src="/_markup/assets/lightbox/jquery.lightbox.js"></script>
 <script src="/_markup/assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="/_markup/assets/js/owl.carousel.min.js"></script>
-<script src="/_markup/assets/js/main.js?v=<?=$version?>"></script>
+<script src="/_markup/assets/js/compressed.js?v=<?=$version?>"></script>
 <script>
 	$('#chooseFlatOwl').owlCarousel({
-    loop:true,
-    margin:15,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:3
-        }
-    }
-})
+	    loop:true,
+	    margin:15,
+	    nav:true,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+	        600:{
+	            items:3
+	        },
+	        1000:{
+	            items:3
+	        }
+	    }
+	});
 </script>
 </body>
 

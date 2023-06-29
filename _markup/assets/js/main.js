@@ -6,7 +6,7 @@ class Loader{
 		}, 1000);	
 
 		setTimeout(function(){
-			$('.logo-live-social, header, .image-text, .navigation-box, .fixed-menu, main').fadeIn('slow');
+			$('.logo-live-social, header, .image-text, .navigation-box, .fixed-menu, main, footer').fadeIn('slow');
 
 			setTimeout(function(){
 				$('.image-text .image-box').addClass('moveNow');
@@ -103,7 +103,7 @@ class About{
 
 class VisiableTracker{
 	constructor(){
-		this.trackElement = "section";
+		this.trackElement = "section, footer";
 		this.addRemoveClass = "g-visible";
 	}
 
