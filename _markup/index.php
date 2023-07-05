@@ -467,8 +467,8 @@ $version = "1.0.5";
 
 				<div class="messages">
 					<ul>
-						<li><a href="" class="whatsapp">whatsapp</a></li>
-						<li><a href="" class="viber">viber</a></li>
+						<li><a href="" class="whatsapp icon">whatsapp</a></li>
+						<li><a href="" class="viber icon">viber</a></li>
 						<li><a href="" class="call">+995 595 06 23 23</a></li>
 					</ul>
 				</div>
@@ -477,14 +477,18 @@ $version = "1.0.5";
 					<a href="" class="mail">mzirali@gmail.com</a>
 				</div>
 
-				<a href="" class="ask-call">ზარის მოთხოვნა</a>
+				<div class="ask-call-box">
+					<a href="" class="ask-call">ზარის მოთხოვნა</a>
+				</div>
 			</div>
 		</div>
 
 		<div class="copyright">
-			<p>ყველა უფლება დაცულია ©2023</p>
+			<div class="box">
+				<p>ყველა უფლება დაცულია ©2023</p>
 
-			<a href="" class="shindi">shindi</a>
+				<a href="" class="shindi">shindi</a>
+			</div>
 		</div>
 	</div>
 </footer>

@@ -1082,6 +1082,8 @@ main{
 
 main .about{
 	@include makeNull;
+	position: relative;
+	z-index: 10;
 }
 
 main .about .center_small h2{
@@ -2327,6 +2329,9 @@ main .tech .right ul li:hover span{
 footer{
 	@include makeNull;
 	display: none;
+	position: relative;
+	z-index: 10;
+	background-color: $white;
 }
 
 footer h2{
@@ -2347,7 +2352,7 @@ footer .map{
 	@include makeNull;
 	width: 100%;
 	height: 380px;
-	background-color: $color5;
+	background-color: #f2f2f2;
 }
 
 footer .topMinus25{
@@ -2397,6 +2402,11 @@ footer .center_small .data ul li span{
 	@include makeNull;
 	display: block;
 	color: $white;
+	@include trans('color', '600ms');
+}
+
+footer .center_small .data ul li span:hover{
+	color: $color1;
 }
 
 footer .center h3{
@@ -2413,6 +2423,18 @@ footer .center .contact-data{
 	position: relative;
 }
 
+footer .center .contact-data::before{
+	content: "";
+	width: 100%;
+	height: 374px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	pointer-events: none;
+	border-radius: 20px;
+	border: solid 1px $color5;
+}
+
 footer .center .contact-data .multi{
 	@include makeNull;
 	width: 100%;
@@ -2423,4 +2445,1036 @@ footer .center .contact-data .multi{
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 1;
+}
+
+footer .center .contact-data .center_small{
+	position: relative;
+	z-index: 2;
+}
+
+footer .center .contact-data .center_small .social{
+	@include makeNull;
+	float: left;
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+footer .center .contact-data .center_small .social ul{
+	@include makeNull;
+	list-style-type: none;
+}
+
+footer .center .contact-data .center_small .social ul li{
+	@include makeNull;
+	float: left;
+	width: 30px;
+	height: 30px;
+	line-height: 100px;
+	margin-right: 25px;
+}
+
+footer .center .contact-data .center_small .social ul li a{
+	@include makeNull;
+	display: block;
+	width: 30px;
+	height: 30px;
+	text-decoration: none;
+	text-indent: -9999px;
+	position: relative;
+}
+
+footer .center .contact-data .center_small .social ul li a::before{
+	@include makeNull;
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: $white;
+	@include trans('background-color', '600ms');
+}
+
+footer .center .contact-data .center_small .social ul li a.facebook::before{
+	@include sprite('-44px -503px');
+}
+
+footer .center .contact-data .center_small .social ul li a.instagram::before{
+	@include sprite('-85px -504px');
+}
+
+footer .center .contact-data .center_small .social ul li a.facebook:hover::before{
+	background-color: $color3;
+}
+
+footer .center .contact-data .center_small .social ul li a.instagram:hover::before{
+	background-color: $color3;
+}
+
+footer .center .contact-data .center_small .messages{
+	@include makeNull;
+	float: left;
+	margin-left: 115px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+footer .center .contact-data .center_small .messages ul{
+	@include makeNull;
+	list-style-type: none;
+}
+
+footer .center .contact-data .center_small .messages ul li{
+	@include makeNull;
+	float: left;
+	margin-right: 25px;
+}
+
+footer .center .contact-data .center_small .messages ul li a.icon{
+	@include makeNull;
+	width: 30px;
+	height: 30px;
+	display: block;
+	text-decoration: none;
+	text-indent: -9999px;
+	position: relative;
+}
+
+footer .center .contact-data .center_small .messages ul li a.icon::before{
+	@include makeNull;
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: $white;
+	@include trans('background-color', '600ms');
+}
+
+footer .center .contact-data .center_small .messages ul li a.whatsapp::before{
+	@include sprite('-209px -504px');
+}
+
+footer .center .contact-data .center_small .messages ul li a.viber::before{
+	@include sprite('-169px -504px');
+}
+
+footer .center .contact-data .center_small .messages ul li a.icon:hover::before{
+	background-color: $color3;
+}
+
+footer .center .contact-data .center_small .messages ul li a.call{
+	@include makeNull;
+	display: block;
+	height: 30px;
+	text-decoration: none;
+	color: $white;
+	@include trans('color', '600ms');
+}
+
+footer .center .contact-data .center_small .messages ul li a.call:hover{
+	color: $color3;
+}
+
+footer .center .contact-data .center_small .mailto{
+	@include makeNull;
+	float: left;
+	margin-left: 105px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+footer .center .contact-data .center_small .mailto a.mail{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	padding-left: 50px;
+	position: relative;
+	height: 30px;
+	color: $white;
+	@include trans('color', '600ms');
+}
+
+footer .center .contact-data .center_small .mailto a.mail::before{
+	@include makeNull;
+	content: "";
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: calc(50% - 15px);
+	left: 0;
+	@include sprite('-131px -504px');
+	background-color: white;
+	@include trans('background-color', '600ms');
+}
+
+footer .center .contact-data .center_small .mailto a.mail:hover{
+	color: $color3;
+}
+
+footer .center .contact-data .center_small .mailto a.mail:hover::before{
+	background-color: $color3;
+}
+
+footer .center .contact-data .center_small .ask-call-box{
+	@include makeNull;
+	float: right;
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+footer .center .contact-data .center_small .ask-call-box a{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	padding: 0 15px 0 45px;
+	background-color: $white;
+	height: 44px;
+	border-radius: 22px;
+	color: $color1;
+	position: relative;
+	@include trans('background-color', '600ms');
+}
+
+footer .center .contact-data .center_small .ask-call-box a::before{
+	@include makeNull;
+	content: "";
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 15px;
+	top: calc(50% - 10px);
+	background-color: $color1;
+	@include sprite('-5px -508px');
+}
+
+footer .center .contact-data .center_small .ask-call-box a:hover{
+	background-color: $color3;
+}
+
+footer .center .copyright{
+	@include makeNull;
+	height: 45px;
+	display: flex;
+	align-items: center;
+}
+
+footer .center .copyright .box{
+	@include makeNull;
+	width: 100%;
+	height: 45px;
+}
+
+footer .center .copyright p{
+	@include makeNull;
+	float: left;
+	height: 45px;
+	color: $color9;
+}
+
+footer .center .copyright a{
+	@include makeNull;
+	display: block;
+	text-decoration: none;
+	text-indent: -9999px;
+	float: right;
+	height: 45px;
+	width: 70px;
+	position: relative;
+}
+
+footer .center .copyright a::after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include sprite('-263px -498px', 'true');
+}
+
+/* about  */
+.inner-page .lines .horizontal{
+	display: none;
+}
+
+.inner-page .logo-live-social{
+	display: none !important;
+}
+
+.inner-page header{
+	display: none !important;
+}
+
+.inner-page .fixed-menu{
+	top: 0 !important;
+}
+
+.inner-page main{
+	margin-top: 152px;
+}
+
+.inner-page main .cover{
+	@include makeNull;
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	z-index: 10;
+}
+
+.inner-page main .cover .multi{
+	@include makeNull;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: rgb(13,46,78);
+	background: linear-gradient(105deg, rgba(13,46,78,1) 0%, rgba(255,255,255,1) 100%);
+	mix-blend-mode: multiply;
+}
+
+.inner-page main .cover .center_small{
+	position: relative;
+	z-index: 2;
+}
+
+.inner-page.about-page main .cover{
+	height: 75px;
+}
+
+.inner-page main .cover .center_small h1{
+	@include makeNull;
+	color: $white;
+	padding: 0 15px;
+}
+
+.inner-page.about-page main .about{
+	margin-top: 85px;
+}
+
+.inner-page.apartments-page main .apartments{
+	@include makeNull;
+	width: 100%;
+	position: relative;
+	z-index: 10;
+	background-color: $white;
+}
+
+.inner-page.apartments-page main .apartments::before{
+	content: "";
+	width: 50%;
+	height: 100%;
+	background-color: $color1;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.inner-page.apartments-page main .apartments .center_small{
+	position: relative;
+	z-index: 2;
+}
+
+.inner-page.apartments-page main .apartments .center_small .left{
+	@include makeNull;
+	width: 433px;
+	float: left;
+	padding-top: 180px;
+	padding-bottom: 125px;
+}
+
+.inner-page.apartments-page main .apartments .center_small .left h2{
+	@include makeNull;
+	color: $black;
+}
+
+.inner-page.apartments-page main .apartments .center_small .left .content{
+	@include makeNull;
+	padding-top: 70px;
+}
+
+.inner-page.apartments-page main .apartments .center_small .left .content p{
+	@include makeNull;
+	margin-bottom: 15px;
+	color: $white;
+}
+
+.inner-page.apartments-page main .apartments .center_small .left .content p:last-child{
+	margin-bottom: 0px;
+}
+
+.inner-page.apartments-page main .apartments .center_small .right{
+	@include makeNull;
+	width: 50%;
+	float: right;
+}
+
+.inner-page.apartments-page main .apartments .center_small .right .map-box{
+	@include makeNull;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 50%;	
+}
+
+.inner-page.apartments-page main .apartments .center_small .right .map-box .mapImage{
+	@include makeNull;
+	width: 367px;
+	height: 652px;
+	position: relative;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	float: left;
+	margin-left: -135px;
+}
+
+.inner-page.apartments-page main .apartments .center_small .right .map-box .mapImage .map{
+	@include makeNull;
+	width: 367px;
+	height: 652px;
+	position: relative;
+}
+
+.inner-page.apartments-page main .apartments .center_small .right .map-box .floors{
+	display: none;
+}
+
+.inner-page.destination-page .lines .vertical .middle{
+	right: unset !important;
+	left: 50%;
+}
+
+.inner-page.destination-page .lines .vertical .left{
+	display: none;
+}
+
+.inner-page.destination-page .lines .vertical .right{
+	display: none;
+}
+
+.inner-page.destination-page main .cover{
+	padding: 40px 0;
+	height: unset;
+	display: flex;
+	align-items: center;
+	z-index: unset;
+	background-position: bottom center;
+}
+
+.inner-page.destination-page main .cover .center_small h1{
+	margin-bottom: 15px;
+}
+
+.inner-page.destination-page main .cover .center_small p{
+	@include makeNull;
+	max-width: 480px;
+	color: $white;
+	padding-left: 15px;
+}
+
+.inner-page.destination-page main .text-image-box{
+	@include makeNull;
+}
+
+.inner-page.destination-page main .text-image-box .center_small{
+	margin: 85px auto;
+}
+
+.inner-page.destination-page main .text-image-box .center_small .text-image{
+	@include makeNull;
+	width: 100%;
+	display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 85px;
+}
+
+.inner-page.destination-page main .text-image-box .center_small .text-image .column{
+	@include makeNull;
+	flex-basis: 50%;
+	position: relative;
+}
+
+.inner-page.destination-page main .text-image-box .center_small .text-image.left .column.text-box{
+	padding-right: 35px;
+}
+
+.inner-page.destination-page main .text-image-box .center_small .text-image.right .column.text-box{
+	padding-left: 35px;
+}
+
+.inner-page.destination-page main .text-image-box .center_small .text-image .column h2{
+	@include makeNull;
+	color: $color1;
+	margin-bottom: 20px;
+}
+
+.inner-page.destination-page main .text-image-box .center_small .text-image .column p{
+	@include makeNull;
+	color: $color8;
+	margin-bottom: 25px;
+}
+
+.inner-page.destination-page main .text-image-box .center_small .text-image .column p:last-child{
+	margin-bottom: 0px;
+}
+
+.inner-page.destination-page main .text-image-box .center_small .text-image .column ul{
+	@include makeNull;
+	list-style-type: none;
+}
+
+.inner-page.destination-page main .text-image-box .center_small .text-image .column ul li{
+	@include makeNull;
+	padding-left: 70px;
+	display: block;
+	position: relative;
+	margin-bottom: 5px;
+	color: $color8;
+}
+
+.inner-page.destination-page main .text-image-box .center_small .text-image .column ul li::before{
+	@include makeNull;
+	content: "";
+	width: 5px;
+	height: 5px;
+	border-radius: 2px;
+	background-color: $color8;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 2.5px);
+}
+
+.inner-page.destination-page main .text-image-box .center_small .text-image .column .image-box{
+	@include makeNull;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.inner-page.destination-page main .text-image-box .center_small .text-image .column .image-box .image{
+	@include makeNull;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 20px;
+	background-size: cover;
+	background-position: center;
+	text-indent: -9999px;
+}
+
+
+.inner-page.destination-page main .text-image-box .center_small .text-image.left .column .image-box::before{
+	content: "";
+	width: calc(89% + 20px);
+	height: calc(100% + 40px);
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	border-radius: 20px;
+	border: solid 1px $color1;
+	@include trans('width', '600ms');
+}
+
+.inner-page.destination-page main .text-image-box .center_small .text-image.right .column .image-box::before{
+	content: "";
+	width: calc(89% + 20px);
+	height: calc(100% + 40px);
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	border-radius: 20px;
+	border: solid 1px $color1;
+	@include trans('width', '600ms');
+}
+
+.inner-page.destination-page main .text-image-box .center_small .text-image .column .image-box:hover::before{
+	width: calc(100% + 40px);
+}
+
+.inner-page.about-company-page main .about-company{
+	@include makeNull;
+	position: relative;
+	z-index: 10;
+	background-color: white;
+}
+
+.inner-page.about-company-page main .about-company .center_small h2{
+	@include makeNull;
+	padding: 45px 0;
+	color: $color1;
+}
+
+.inner-page.about-company-page main .about-company .center_small p{
+	@include makeNull;
+	color: $color7;
+}
+
+.inner-page.about-company-page main .about-company .center_small .image-list{
+	@include makeNull;
+	padding: 45px 0;
+}
+
+.inner-page.about-company-page main .about-company .center_small .image-list .image-box{
+	@include makeNull;
+	width: 100%;
+	height: 215px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 20px;
+}
+
+.inner-page.about-company-page main .about-company .center_small .image-list .image-box .image{
+	@include makeNull;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	@include trans('transform', '600ms');
+}
+
+.inner-page.about-company-page main .about-company .center_small .image-list .image-box:hover .image{
+	transform: scale(1.2);
+}
+
+.inner-page.contact-page .lines{
+	display: none;
+}
+
+.inner-page.invest-page main{
+	position: relative;
+	z-index: 10;
+	background-color: $white;
+}
+
+.inner-page.invest-page main .cover{
+/*	height: 360px;*/
+	background-image: none;
+}
+
+.inner-page.invest-page main .cover .bg{
+	@include makeNull;
+	width: 100%;
+	height: 360px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-size: cover;
+	background-position: bottom center;
+}
+
+.inner-page.invest-page main .cover .multi{
+	height: 360px;
+	z-index: 2;
+}
+
+.inner-page.invest-page main .cover .multi2{
+	@include makeNull;
+	width: $center_small;
+	height: calc(100% - 75px);
+	position: absolute;
+	left: calc(50% - #{$center_small / 2});
+	bottom: 0px;
+	background-color: $color3;
+	z-index: 3;
+	border-radius: 20px;
+	mix-blend-mode: multiply;
+}
+
+.inner-page.invest-page main .cover .center_small{
+	z-index: 4;
+}
+
+.inner-page.invest-page main .cover .center_small .about-georgia{
+	@include makeNull;
+	padding: 60px 70px;
+}
+
+.inner-page.invest-page main .cover .center_small .about-georgia h2{
+	@include makeNull;	
+	color: $color1;
+	margin-bottom: 30px;
+}
+
+.inner-page.invest-page main .cover .center_small .about-georgia .content{
+	@include makeNull;	
+}
+
+.inner-page.invest-page main .cover .center_small .about-georgia .content p{
+	@include makeNull;
+	color: $white;
+}
+
+.inner-page.invest-page main .cover .center_small .about-georgia .content ul{
+	@include makeNull;
+	list-style-type: none;
+	margin-top: 40px;
+}
+
+.inner-page.invest-page main .cover .center_small .about-georgia .content ul li{
+	@include makeNull;
+	display: block;
+	margin-bottom: 30px;
+	color: $white;
+	padding-left: 45px;
+	position: relative;
+}
+
+.inner-page.invest-page main .cover .center_small .about-georgia .content ul li::before{
+	@include makeNull;
+	content: "";
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	background-color: $color1;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 6px);
+}
+
+.inner-page.invest-page main .cover .center_small .about-georgia .content ul li:last-child{
+	margin-bottom: 0px;
+}
+
+.inner-page.invest-page main .tourism{
+	@include makeNull;
+	margin-top: 65px;
+	padding-bottom: 135px;
+	position: relative;
+}
+
+.inner-page.invest-page main .tourism .bg{
+	@include makeNull;
+	width: 100%;
+	height: calc(100% - 120px);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+	background-size: cover;
+	background-position: center;
+}
+
+.inner-page.invest-page main .tourism .center_small{
+	position: relative;
+	z-index: 2;
+}
+
+.inner-page.invest-page main .tourism .center_small .content{
+	@include makeNull;
+	background-color: $white;
+	border-radius:20px;
+	border: solid 1px $color1;
+	padding: 45px 70px;
+}
+
+.inner-page.invest-page main .tourism .center_small .content h2{
+	@include makeNull;
+	color: $color1;
+	margin-bottom: 30px;
+}
+
+.inner-page.invest-page main .tourism .center_small .content p{
+	@include makeNull;
+	color: $color7;
+}
+
+
+.inner-page.invest-page main .tourism .center_small .content ul{
+	@include makeNull;
+	list-style-type: none;
+	margin-top: 40px;
+}
+
+.inner-page.invest-page main .tourism .center_small .content ul li{
+	@include makeNull;
+	display: block;
+	margin-bottom: 30px;
+	color: $color3;
+	padding-left: 45px;
+	position: relative;
+}
+
+.inner-page.invest-page main .tourism .center_small .content ul li::before{
+	@include makeNull;
+	content: "";
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	background-color: $color1;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 6px);
+}
+
+.inner-page.invest-page main .tourism .center_small .content ul li:last-child{
+	margin-bottom: 0px;
+}
+
+.inner-page.invest-page main .text-boxes{
+	@include makeNull;
+	padding: 85px 0;
+	position: relative;
+}
+
+.inner-page.invest-page main .text-boxes::before{
+	@include makeNull;
+	content: "";
+	width: 1px;
+	height: 100%;
+	background-color: $color5;
+	position: absolute;
+	left: calc(50% - 0.5px);
+	top: 0;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box{
+	@include makeNull;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box .left{
+	@include makeNull;
+	flex-basis: 50%;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box .left .content{
+	@include makeNull;
+	padding-bottom: 85px;
+	padding-right: 15px;
+	position: relative;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box .left .content:first-child::after{
+	content: "";
+	width: 300%;
+	height: 1px;
+	background-color: $color5;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box .left .content h2{
+	@include makeNull;
+	color: $color1;
+	margin-bottom: 15px;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box .left .content p{
+	@include makeNull;
+	color: $color7;
+	padding-bottom: 30px;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box .left .content p:last-child{
+	padding-bottom: 0;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box .left .content:last-child{
+	padding-bottom: 0;
+	padding-top: 85px;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box .right{
+	@include makeNull;
+	flex-basis: 50%;
+	display: flex;
+	align-items: center;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box .right .content{
+	@include makeNull;
+	padding: 85px 0 85px 15px;
+	position: relative;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box .right .content::before{
+	content: "";
+	width: 300%;
+	height: 1px;
+	background-color: $color5;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box .right .content::after{
+	content: "";
+	width: 300%;
+	height: 1px;
+	background-color: $color5;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box .right .content h2{
+	@include makeNull;
+	color: $color1;
+	margin-bottom: 15px;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box .right .content p{
+	@include makeNull;
+	color: $color7;
+	padding-bottom: 30px;
+}
+
+.inner-page.invest-page main .text-boxes .center_small .box .right .content p:last-child{
+	padding-bottom: 0;
+}
+
+.inner-page.invest-page .lines .vertical .middle{
+	right: unset !important;
+	left: calc(50% - 0.5px);
+}
+
+.inner-page.invest-page main .about-batumi{
+	@include makeNull;
+	width: 100%;
+	position: relative;
+}
+
+.inner-page.invest-page main .about-batumi .bg{
+	@include makeNull;
+	width: 100%;
+	height: 495px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-size: cover;
+	background-position: center;
+}
+
+.inner-page.invest-page main .about-batumi .multi2{
+	@include makeNull;
+	width: $center_small;
+	height: calc(100% - 190px);
+	position: absolute;
+	left: calc(50% - #{$center_small / 2});
+	bottom: 0px;
+	background-color: $color3;
+	z-index: 2;
+	border-radius: 20px;
+	mix-blend-mode: multiply;
+}
+
+.inner-page.invest-page main .about-batumi .center_small{
+	position: relative;
+	z-index: 3;
+	padding-top: 190px;
+}
+
+.inner-page.invest-page main .about-batumi .center_small .content{
+	@include makeNull;
+	padding: 60px 70px;
+}
+
+.inner-page.invest-page main .about-batumi .center_small .content h2{
+	@include makeNull;
+	color: $color1;
+	margin-bottom: 30px;
+}
+
+.inner-page.invest-page main .about-batumi .center_small .content p{
+	@include makeNull;
+	color: $white;
+}
+
+.inner-page.invest-page main .about-batumi .center_small .content ul{
+	@include makeNull;
+	list-style-type: none;
+	margin-top: 40px;
+}
+
+.inner-page.invest-page main .about-batumi .center_small .content ul li{
+	@include makeNull;
+	display: block;
+	margin-bottom: 30px;
+	color: $white;
+	padding-left: 45px;
+	position: relative;
+}
+
+.inner-page.invest-page main .about-batumi .center_small .content ul li::before{
+	@include makeNull;
+	content: "";
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	background-color: $color1;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 6px);
+}
+
+.inner-page.invest-page main .about-batumi .center_small .content ul li:last-child{
+	margin-bottom: 0px;
+}
+
+.inner-page.invest-page main .real-estate{
+	@include makeNull;
+}
+
+.inner-page.invest-page main .real-estate .center_small h2{
+	@include makeNull;
+	margin: 85px 0;
+	color: $color1;
+}
+
+.inner-page.invest-page main .real-estate .center_small .boxes{
+	@include makeNull;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;	
+	margin-bottom: 85px;
+}
+
+.inner-page.invest-page main .real-estate .center_small .boxes .item{
+	@include makeNull;
+	flex-basis: calc(50% - 7.5px);
+	padding: 15px;
+	border: solid 1px $color5;
+	border-radius: 20px;
+	@include dropShadow('0px', '3px', '15px', '3px', 'rgba(0,0,0,0.1)');
+}
+
+.inner-page.invest-page main .real-estate .center_small .boxes .item .image{
+	@include makeNull;
+	width: 100%;
+	height: 337px;
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 40px;
+}
+
+.inner-page.invest-page main .real-estate .center_small .boxes .item p{
+	@include makeNull;
+	color: $black;
+}
+
+.inner-page.invest-page main .real-estate .center_small .boxes .item:first-child{
+	margin-right: 15px;
 }
