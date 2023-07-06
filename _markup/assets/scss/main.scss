@@ -3075,10 +3075,15 @@ footer .center .copyright a::after{
 	height: 360px;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: -100%;
 	z-index: 1;
 	background-size: cover;
 	background-position: bottom center;
+	@include transCubic('left', '1200ms');
+}
+
+.inner-page.invest-page main .cover.g-visible .bg{
+	left: 0;
 }
 
 .inner-page.invest-page main .cover .multi{
@@ -3097,6 +3102,12 @@ footer .center .copyright a::after{
 	z-index: 3;
 	border-radius: 20px;
 	mix-blend-mode: multiply;
+	transform: translateX(400px);
+	@include transCubic('transform', '1200ms');
+}
+
+.inner-page.invest-page main .cover.g-visible .multi2{
+	transform: translateX(0px);
 }
 
 .inner-page.invest-page main .cover .center_small{
@@ -3106,6 +3117,12 @@ footer .center .copyright a::after{
 .inner-page.invest-page main .cover .center_small .about-georgia{
 	@include makeNull;
 	padding: 60px 70px;
+	transform: translateX(400px);
+	@include transCubic('transform', '1200ms');
+}
+
+.inner-page.invest-page main .cover.g-visible .center_small .about-georgia{
+	transform: translateX(0px);
 }
 
 .inner-page.invest-page main .cover .center_small .about-georgia h2{
@@ -3184,6 +3201,12 @@ footer .center .copyright a::after{
 	border-radius:20px;
 	border: solid 1px $color1;
 	padding: 45px 70px;
+	transform: translateX(-400px);
+	@include transCubic('transform', '1200ms');
+}
+
+.inner-page.invest-page main .tourism.g-visible .center_small .content{
+	transform: translateX(0px);
 }
 
 .inner-page.invest-page main .tourism .center_small .content h2{
