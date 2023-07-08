@@ -2224,7 +2224,7 @@ main .benefits .center .right a:hover{
 main .tech{
 	@include makeNull;
 	width: 100%;
-	min-height: 630px;
+	min-height: 500px;
 	position: relative;
 }
 
@@ -2262,11 +2262,10 @@ main .tech .right{
 	@include makeNull;
 	width: 50%;
 	height: 100%;
-	position: absolute;
-	top: 0;
-	right: 0;
+	position: relative;
 	z-index: 3;
 	padding: 130px;
+	margin-left: 50%;
 }
 
 main .tech .right h2{
@@ -2285,6 +2284,10 @@ main .tech .right ul li{
 	margin-bottom: 25px;
 	padding-left: 50px;
 	position: relative;
+}
+
+main .tech .right ul li:last-child{
+	margin-bottom: 0px;
 }
 
 main .tech .right ul li em{

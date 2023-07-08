@@ -1,5 +1,43 @@
 @import 'variables';
 
 @media(max-width: 1537px) and (min-width: 1400px){
-	
+	.center{
+		margin: 0 auto;
+		width: $center_1536;
+	}
+
+	.center_small{
+		margin: 0 auto;
+		width: $center_small_1536;
+	}
+
+	.lines .vertical{
+		width: $center_small_1536;
+		left: calc(50% - #{$center_small_1536 / 2});
+	}
+
+	.logo-live-social .center .right .social li{
+		margin: 0 0 0 15px;
+	}
+
+	.logo-live-social .center .right .center_small .live-video{
+		margin-right: 60px;
+	}
+
+	header .center .contact-box a.call{
+		padding: 0 30px;
+	}
+
+	.logo-live-social .center .logo{
+		transform: scale(0.9);
+    	transform-origin: left;
+	}
+
+	.navigation-box .nav-box nav ul li{
+		margin: 0 8px;
+	}
+
+	main .choose-flat .center .top a{
+		margin-right: 150px;
+	}
 }
