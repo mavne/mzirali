@@ -132,23 +132,102 @@ class VisiableTracker{
 
 class Advantages{
 	addLast3LiClass(){
-		var ulElement = document.querySelector("main .main-advantages .center_small .list-box ul");
-		
-	  	var liElements = ulElement.querySelectorAll("li:nth-last-child(-n+3)");
-	  	liElements.forEach(function(liElement) {
-	    	liElement.classList.add("last");
-	  	});
+		if($('main .main-advantages .center_small .list-box ul').length){
+			var ulElement = document.querySelector("main .main-advantages .center_small .list-box ul");
+			
+		  	var liElements = ulElement.querySelectorAll("li:nth-last-child(-n+3)");
+		  	liElements.forEach(function(liElement) {
+		    	liElement.classList.add("last");
+		  	});
 
-	  	var liElements2 = ulElement.querySelectorAll("li");
-		liElements2.forEach(function(liElement, index) {
-			if((index + 1) % 3 === 0) {
-				liElement.classList.add("third");
-			}
-		});
+		  	var liElements2 = ulElement.querySelectorAll("li");
+			liElements2.forEach(function(liElement, index) {
+				if((index + 1) % 3 === 0) {
+					liElement.classList.add("third");
+				}
+			});
+		}
 	}
 
 	run(){
 		this.addLast3LiClass();
+	}
+}
+
+class Mobile{
+	makeHeader(){
+		var logo = $('.fixed-menu .bottom .logo').prop('outerHTML');
+		var live = $('.fixed-menu .top .live-video').prop('outerHTML');
+		var call = $('.fixed-menu .top .call').prop('outerHTML');
+
+		var html = logo;
+		html += '<div class="middle">';
+		html += live;
+		html += call;
+		html += '</div>';
+
+		html += '<div class="burger"><a href="javascript:void(0)">burger</a></div>';
+		$('.mobile-header').html(html);
+	}
+
+	setMainImageHeight(){
+		var height = $(window).height() - 90;
+		$(".image-text").css('height', height+"px");
+	}
+
+	burgerClickInit(){
+		$(document).on('click', '.mobile-header .burger a', function(){
+			$('.mobile-navigation').addClass('open');
+		})
+	}
+
+	closeClickInit(){
+		$(document).on('click', '.mobile-navigation .close a', function(){
+			$('.mobile-navigation').removeClass('open');
+		})
+	}
+
+	makeNavigation(){
+		var close = '<div class="close"><a href="javascript:void(0)">close</a></div>';
+		var languages = $('.navigation-box .nav-box .languages').prop('outerHTML');
+		var nav = $('.navigation-box .nav-box nav').prop('outerHTML');
+		var social = $('.logo-live-social .center .right .social').prop('outerHTML');
+		var contact = $('header .center .contact-box').prop('outerHTML');
+		var bottom = "<div class='bottom'>" + social + contact + "</div>";
+		
+		$('.mobile-navigation').html(close + languages + nav + bottom);
+	}
+
+	aboutImages(){
+		var image1 = $('main .about .center_small .content .outside-left .image').prop('outerHTML');
+		var image2 = $('main .about .center_small .content .inside-image .image').prop('outerHTML');
+		var image3 = $('main .about .center_small .content .outside-right .image').prop('outerHTML');
+
+		var html = '<div class="image-mobile-box">';
+		html += '<div class="image-mobile-item">';
+		html += image1;
+		html += '</div>';
+
+		html += '<div class="image-mobile-item">';
+		html += image2;
+		html += '</div>';
+
+		html += '<div class="image-mobile-item">';
+		html += image3;
+		html += '</div>';
+
+		html += '</div>';
+
+		$('main .about .center_small .content .text .data-list').before(html);
+	}
+
+	run(){
+		this.makeHeader();
+		this.setMainImageHeight();
+		this.burgerClickInit();
+		this.makeNavigation();
+		this.closeClickInit();
+		this.aboutImages();
 	}
 }
 
@@ -171,4 +250,8 @@ visiableTracker.run();
 /* Advantages */
 var advantages = new Advantages;
 advantages.run();
+
+/* Mobile */
+var mobile = new Mobile;
+mobile.run();
 

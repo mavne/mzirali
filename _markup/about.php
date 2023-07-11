@@ -17,6 +17,9 @@ $version = "1.0.5";
 </head>
 <body class="inner-page about-page">
 
+<div class="mobile-navigation"></div>
+<div class="mobile-header"></div>
+
 <div class="fixed-menu">
 	<div class="top">
 		<div class="center_small"></div>

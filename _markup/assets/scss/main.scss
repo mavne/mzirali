@@ -41,6 +41,14 @@ body{
 	overflow-y: auto;
 }
 
+.mobile-header{
+	display: none;
+}
+
+.mobile-navigation{
+	display: none;
+}
+
 .lines{
 	@include makeNull;
 	width: 100%;
@@ -1080,12 +1088,16 @@ main{
 	display: none;
 }
 
+.image-mobile-box{
+	display: none;
+}
+
 main .about{
 	@include makeNull;
 	position: relative;
 	z-index: 10;
 }
-
+ 
 main .about .center_small h2{
 	@include makeNull;
 	color: $color5;
@@ -1364,6 +1376,7 @@ main .main-advantages{
 	@include makeNull;
 	background-image: url(/_markup/assets/img/masklogo.png);
   background-size: contain;
+  background-repeat: no-repeat;
   background-position: 10px 135px;
 }
 

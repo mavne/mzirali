@@ -1,5 +1,5 @@
 <?php 
-$version = "1.0.5";
+$version = "1.0.6";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +16,9 @@ $version = "1.0.5";
 	<link rel="stylesheet" type="text/css" href="/_markup/assets/css/responsive_ge.css?v=<?=$version?>">
 </head>
 <body>
+
+<div class="mobile-navigation"></div>
+<div class="mobile-header"></div>
 
 <div class="fixed-menu">
 	<div class="top">
@@ -108,9 +111,7 @@ $version = "1.0.5";
 						</li>
 					</ul>
 				</div>
-			</div>			
-
-			
+			</div>
 		</div>
 
 		<div class="contact-box">
@@ -128,7 +129,6 @@ $version = "1.0.5";
 		<div class="mainColorBg3"></div>
 		<div class="mainColorBg4"></div>
 	</div>
-
 	
 	<div class="text-box">
 		<div class="center_small height100">
@@ -237,6 +237,7 @@ $version = "1.0.5";
 						<p>ზღვასთან სიახლოვე</p>
 					</li>
 				</ul>
+				<div class="clearer"></div>
 			</div>
 		</div>
 	</section>
@@ -402,7 +403,7 @@ $version = "1.0.5";
 	<section class="benefits">
 		<div class="center">
 			<div class="left">
-				<h2>შეიძინეთ ბინა "მზირალში"<br>და მიიღეთ მაქსიმალური სარგებელი:</h2>
+				<h2>შეიძინეთ ბინა "მზირალში" და მიიღეთ მაქსიმალური სარგებელი:</h2>
 
 				<ul>
 					<li><span>პროექტის დასრულების შემდეგ ბათუმი რივიერაში ბინების ღირებულება მინიმუმ 10%-ით გაიზრდება!</span></li>
